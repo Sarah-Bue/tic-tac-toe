@@ -68,6 +68,10 @@ container {
     display: none;
 }
 
+.visible {
+    display: block;
+}
+
                                         /* Buttons */
 
 #buttons {
