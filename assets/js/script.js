@@ -15,6 +15,7 @@ const player_O = "O";
 let currPlayer = player_X;
 let gameRunning = false;
 let gameOver = false;
+const boardFill = Array (cells.length);
 const winningCells = [
     [0, 1, 2],
     [3, 4, 5],
@@ -73,26 +74,32 @@ function startGame() {
     gameRunning = true;
     // clear board
     cells.forEach((cell) => (cell.innerText = ""));
+    boardFill.fill(null);
+console.log("Hi there")
 }
 
-function clickCell() {
-    // Mark cell
-    if (cell.innerText == "") {
-        console.log("emptycell");
-    }
+startGame();
 
-   /*  if (currPlayer === player_X) {
-        cell.innerText = player_X;
+function clickCell(event) {
+    // don't update if cell is not empty
+    const cell = event.target;
+    const cellNumber = cell.dataset.index;
+    if (cell.innerText != "") {
+        return;
     }
     else {
-        cell.innerText = player_O;
-    } */
+        cell.innerText = player_X;
+    }
+
+
 
     // change turn
     changeTurn();
+
 }
 
 function changeTurn() {
+    // currPlayer === player_X ? currPlayer = player_0 : currPlayer = player_X
     if (currPlayer === player_X) {
         currPlayer = player_O;
     }
