@@ -14,6 +14,7 @@ const player_X = "X";
 const player_O = "O";
 let currPlayer = player_X;
 let gameRunning = false;
+let gameOver = false;
 const winningCells = [
     [0, 1, 2],
     [3, 4, 5],
@@ -54,7 +55,7 @@ function playVictory() {
 }
 
 function muteSound() {
-    // this might make more sense as a toggle between mute / on 
+    // unmute when clicked again and sound is currently muted ? 
     clickSound.muted = true;
     victorySound.muted = true;
     buttonSound.muted = true;
@@ -66,39 +67,61 @@ function switchGameMode() {
 }
 
 function startGame() {
+    // set Player to X
     currPlayer = player_X;
+    // start Game
     gameRunning = true;
     // clear board
+    cells.forEach((cell) => (cell.innerText = ""));
 }
 
 function clickCell() {
     // Mark cell
+    if (cell.innerText == "") {
+        console.log("emptycell");
+    }
+
+   /*  if (currPlayer === player_X) {
+        cell.innerText = player_X;
+    }
+    else {
+        cell.innerText = player_O;
+    } */
+
     // change turn
+    changeTurn();
 }
 
 function changeTurn() {
-   // switch between X and O player and symbol
+    if (currPlayer === player_X) {
+        currPlayer = player_O;
+    }
+    else {
+        currPlayer = player_X;
+    }
 }
 
 function checkWinner() {
     // check if winning conditions are met
+    gameOver = true;
     playVictory();
     announceWinner();
 }
 
 function checkDraw() {
     // check if draw conditions are met
-    // unhide status text
+    gameOver = true;
     playVictory();
     announceWinner();
 }
 
 function announceWinner() {
-    // announce who won
+    // Announce Winner
+
     // unhide status text
     statusText.className = "visible";
-    console.log("you won")
 }
+
 
                                     // Start Game
 
