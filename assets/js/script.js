@@ -46,28 +46,28 @@ gameModeButton.addEventListener("click", switchGameMode);
 
                                     // Functions
 /**
- * 
+ * This function plays the "clickSound" sound
  */
 function playClick() {
     clickSound.play();
 }
 
 /**
- * 
+ * This function plays the "buttonSound" sound
  */
 function playButton() {
     buttonSound.play();
 }
 
 /**
- * 
+ * This function plays the "victorySound" sound
  */
 function playVictory() {
     victorySound.play();
 }
 
 /**
- * 
+ * This function mutes all sounds
  */
 function muteSound() {
     // unmute when clicked again and sound is currently muted ? 
@@ -77,24 +77,30 @@ function muteSound() {
 }
 
 /**
- * 
+ * This function switches between the two game modes: Player-vs-Player and Player-vs-Computer
  */
 function switchGameMode() {
     // switch between pvp and pvc game mode
 }
 
 /**
- * 
+ * This function (re-)starts the game by resetting the board to empty and setting the turn to be player_X 
  */
 function startGame() {
     // set Player to X
     currPlayer = player_X;
     // clear board
     cells.forEach((cell) => (cell.innerText = ""));
+    // game not over
+    gameOver = false;
 }
 
 /**
- * 
+ * This function updates a cell when clicked
+ * Only empty cells can be updated
+ * When clicked, the current player's symbol appears in a cell
+ * It then changes to the nex player's turn
+ * Lastly, it checks for a win or draw
  */
 function clickCell(event) {
     // don't update if cell is not empty
@@ -117,7 +123,7 @@ function clickCell(event) {
 }
 
 /**
- * 
+ * This function changes to the next player's turn based on the current player
  */
 function changeTurn() {
     // currPlayer === player_X ? currPlayer = player_0 : currPlayer = player_X
@@ -129,6 +135,12 @@ function changeTurn() {
     }
 }
 
+/**
+ * This function checks if a win has been achieved
+ * It compares the board against the winning combinations defined in winningCells
+ * If no win is achieved, it checks for a draw
+ * If a win is achieved, it announces a winner
+ */
 function checkWinner() {    
     let roundWon = false;
 
@@ -159,6 +171,10 @@ function checkWinner() {
         //checkDraw();
 }
 
+/**
+ * This function checks for a draw
+ * If a draw is achieved, it announces a draw
+ */
 function checkDraw() {
     var isFull = true;
     for (var i = 0; i < cells. length; i++) { 
@@ -175,7 +191,9 @@ function checkDraw() {
 
 
 /**
- * 
+ * This function announces if a win has been achieved
+ * It plays the "playVictory" sound
+ * It unhides the "status-text" and updates it to display the current player as the winner
  */
 function announceWinner() {
     // play Winner sound
@@ -189,7 +207,9 @@ function announceWinner() {
 }
 
 /**
- * 
+ * * This function announces if a draw has been achieved
+ * It plays the "playVictory" sound
+ * It unhides the "status-text" and updates it to display "Draw!"
  */
 function announceDraw() {
     //play Winner sound
