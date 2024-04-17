@@ -13,7 +13,6 @@ const gameModeButton = document.getElementById("game-mode-button");
 const player_X = "X";
 const player_O = "O";
 let currPlayer = player_X;
-let gameRunning = false;
 let gameOver = false;
 const winningCells = [
     [0, 1, 2],
@@ -35,7 +34,10 @@ victorySound.muted = false;
 buttonSound.muted = false;
 
                                     // Event Listeners
-cells.forEach((cell) => cell.addEventListener("click", playClick));
+cells.forEach((cell) => cell.addEventListener("click", (event) => {
+    playClick();
+    clickCell(event);
+}));
 buttons.forEach((button) => button.addEventListener("click", playButton));
 resetButton.addEventListener("click", startGame);
 muteButton.addEventListener("click", muteSound);
@@ -53,7 +55,9 @@ function playButton() {
 function playVictory() {
     victorySound.play();
 }
-
+/**
+ * 
+ */
 function muteSound() {
     // unmute when clicked again and sound is currently muted ? 
     clickSound.muted = true;
@@ -69,19 +73,19 @@ function switchGameMode() {
 function startGame() {
     // set Player to X
     currPlayer = player_X;
-    // start Game
-    gameRunning = true;
     // clear board
     cells.forEach((cell) => (cell.innerText = ""));
 }
 
-function clickCell() {
+function clickCell(event) {
     // don't update if cell is not empty
-
+    if (event.target.innerText) {
+        return;
+    }
     // update cell with current player's symbol
-
+    event.target.innerText = currPlayer;
     // change turn function
-
+    changeTurn();
     // check winner function
 
 }
