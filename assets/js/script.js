@@ -2,8 +2,8 @@
 
                                     // HTML Elements
 const cells = document.querySelectorAll(".cell");
-const board = document.getElementById("board");
-const buttons = document.querySelectorAll(".button")
+// const board = document.getElementById("board");                     // unused
+const buttons = document.querySelectorAll(".button");
 const statusText = document.getElementById("status-text");
 const muteButton = document.getElementById("mute-button");
 const resetButton = document.getElementById("reset-button");
@@ -14,6 +14,7 @@ const player_X = "X";
 const player_O = "O";
 let currPlayer = player_X;
 let gameOver = false;
+let board = ["", "", "", "", "", "", "", "", "",];
 const winningCells = [
     [0, 1, 2],
     [3, 4, 5],
@@ -28,7 +29,7 @@ const winningCells = [
                                     // Sounds
 const clickSound = new Audio ("assets/audio/click.mp3");
 const victorySound = new Audio ("assets/audio/victory.mp3");
-const buttonSound = new Audio ("assets/audio/button.mp3")
+const buttonSound = new Audio ("assets/audio/button.mp3");
 clickSound.muted = false;
 victorySound.muted = false;
 buttonSound.muted = false;
@@ -44,17 +45,27 @@ muteButton.addEventListener("click", muteSound);
 gameModeButton.addEventListener("click", switchGameMode);
 
                                     // Functions
+/**
+ * 
+ */
 function playClick() {
     clickSound.play();
 }
 
+/**
+ * 
+ */
 function playButton() {
     buttonSound.play();
 }
 
+/**
+ * 
+ */
 function playVictory() {
     victorySound.play();
 }
+
 /**
  * 
  */
@@ -63,13 +74,18 @@ function muteSound() {
     clickSound.muted = true;
     victorySound.muted = true;
     buttonSound.muted = true;
-    console.log("sound muted");
 }
 
+/**
+ * 
+ */
 function switchGameMode() {
     // switch between pvp and pvc game mode
 }
 
+/**
+ * 
+ */
 function startGame() {
     // set Player to X
     currPlayer = player_X;
@@ -77,19 +93,32 @@ function startGame() {
     cells.forEach((cell) => (cell.innerText = ""));
 }
 
+/**
+ * 
+ */
 function clickCell(event) {
     // don't update if cell is not empty
-    if (event.target.innerText) {
+    const clickedCell = event.target;
+    // const cellIndex = clickedCell.getAttribute("data-cell-index");
+
+    if (clickedCell.innerText) {
         return;
     }
     // update cell with current player's symbol
-    event.target.innerText = currPlayer;
+    clickedCell.innerText = currPlayer;
+
+    console.log(clickedCell);
     // change turn function
     changeTurn();
     // check winner function
-
+    checkWinner();
+    // check draw function
+    checkDraw();
 }
 
+/**
+ * 
+ */
 function changeTurn() {
     // currPlayer === player_X ? currPlayer = player_0 : currPlayer = player_X
     if (currPlayer === player_X) {
@@ -100,33 +129,54 @@ function changeTurn() {
     }
 }
 
+function checkWinner() {    
+    let roundWon = false;
 
-function checkWinner() {
-    // check if winning conditions are met
-        // if 0 == 1 == 2 || 3 == 4 == 5 || 6 == 7 == 8 etc
+    // for (let winningCell of winningCells) {         // for (let i = 0; i < winningCells.length; i++) 
+    for (let i = 0; i < winningCells.length; i++) {
+        const combo = winningCells[i];
+        const cellA = board[combo[0]];
+        const cellB = board[combo[1]];
+        const cellC = board[combo[2]];
 
-    // if winning conditions are met:
-    gameOver = true;
-    announceWinner();
+        // Check if cells aren't empty
+        if (cellA == "" || cellB == "" || cellC == "") {
+            continue;
+        }
 
-    // if winning conditions are not met
-        // check for draw
-            // if all cells are full
+        // Check if cells match
+        if (cellA == cellB && cellA == cellC) {
+            roundWon = true;
+            break;
+        }
+    }
 
-        // switch turn
+    if (roundWon) {
+        console.log("we have a winner");
+    }
 
+        // If no Winner, check for a Draw
+        //checkDraw();
 }
 
 function checkDraw() {
-    //  if draw conditions are met
-    gameOver = true;
-    announceDraw();
-
-    // draw conditions 
-        // no winner
-        // all cells are full
+    var isFull = true;
+    for (var i = 0; i < cells. length; i++) { 
+        if (cells[i]. innerText === "") {
+            isFull = false;
+            break;
+        }
+    }
+    if (isFull && !gameOver) {
+        gameOver = true;
+        announceDraw();
+    }
 }
 
+
+/**
+ * 
+ */
 function announceWinner() {
     // play Winner sound
     playVictory();
@@ -135,9 +185,12 @@ function announceWinner() {
     statusText.className = "visible";
 
     // update status text
-        // `The winner is ${winnerText}!`
+    statusText.innerText = `The winner is ${currPlayer}!`
 }
 
+/**
+ * 
+ */
 function announceDraw() {
     //play Winner sound
     playVictory();
@@ -146,8 +199,8 @@ function announceDraw() {
     statusText.className = "visible";
 
     // update status text
-        // "It's a draw!"
+    statusText.innerText = "Draw!";
 }
 
                                     // Start Game
-// startGame();
+// startGame(); 
