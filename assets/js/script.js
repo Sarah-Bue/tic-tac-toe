@@ -12,6 +12,11 @@ let currPlayer = player_X;
 let gameRunning = false;
 
                                     // Sounds
+const clickSound = new Audio ("assets/audio/click.mp3");
+const victorySound = new Audio ("assets/audio/victory.mp3");
+
+console.log(clickSound)
+                                    
 
                                     // Event Listeners
 
