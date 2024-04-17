@@ -15,7 +15,6 @@ const player_O = "O";
 let currPlayer = player_X;
 let gameRunning = false;
 let gameOver = false;
-const boardFill = Array (cells.length);
 const winningCells = [
     [0, 1, 2],
     [3, 4, 5],
@@ -74,27 +73,16 @@ function startGame() {
     gameRunning = true;
     // clear board
     cells.forEach((cell) => (cell.innerText = ""));
-    boardFill.fill(null);
-console.log("Hi there")
 }
 
-startGame();
-
-function clickCell(event) {
+function clickCell() {
     // don't update if cell is not empty
-    const cell = event.target;
-    const cellNumber = cell.dataset.index;
-    if (cell.innerText != "") {
-        return;
-    }
-    else {
-        cell.innerText = player_X;
-    }
 
+    // update cell with current player's symbol
 
+    // change turn function
 
-    // change turn
-    changeTurn();
+    // check winner function
 
 }
 
@@ -108,27 +96,54 @@ function changeTurn() {
     }
 }
 
+
 function checkWinner() {
     // check if winning conditions are met
+        // if 0 == 1 == 2 || 3 == 4 == 5 || 6 == 7 == 8 etc
+
+    // if winning conditions are met:
     gameOver = true;
-    playVictory();
     announceWinner();
+
+    // if winning conditions are not met
+        // check for draw
+            // if all cells are full
+
+        // switch turn
+
 }
 
 function checkDraw() {
-    // check if draw conditions are met
+    //  if draw conditions are met
     gameOver = true;
-    playVictory();
-    announceWinner();
+    announceDraw();
+
+    // draw conditions 
+        // no winner
+        // all cells are full
 }
 
 function announceWinner() {
-    // Announce Winner
+    // play Winner sound
+    playVictory();
 
     // unhide status text
     statusText.className = "visible";
+
+    // update status text
+        // `The winner is ${winnerText}!`
 }
 
+function announceDraw() {
+    //play Winner sound
+    playVictory();
+
+    // unhide status text
+    statusText.className = "visible";
+
+    // update status text
+        // "It's a draw!"
+}
 
                                     // Start Game
-
+// startGame();
