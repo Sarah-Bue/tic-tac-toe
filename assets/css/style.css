@@ -6,7 +6,7 @@
     box-sizing: border-box;
 }
 
-/* General Styles */
+                                        /* General Styles */
 
 body {
     width: 100vw;
@@ -39,7 +39,7 @@ container {
     box-shadow: 3px 3px black;
 } 
 
-/* Game Area */
+                                        /* Game Area */
 
 #board {
     background-color: blue;
@@ -59,7 +59,16 @@ container {
     border: 3px solid;
 }
 
-/* Buttons */
+.cell:hover {
+    color:white;
+    opacity: 0.5;
+}
+
+.hidden {
+    display: none;
+}
+
+                                        /* Buttons */
 
 #buttons {
     width: 100%;
@@ -77,8 +86,8 @@ button {
     cursor: pointer;
 }
 
-.hidden {
-    display: none;
+button:hover {
+    background-color: black;
+    color: white;
 }
-
 
