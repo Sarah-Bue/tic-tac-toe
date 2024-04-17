@@ -1,0 +1,84 @@
+@import url('https://fonts.googleapis.com/css2?family=Gloria+Hallelujah&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* General Styles */
+
+body {
+    width: 100vw;
+    height: 100vh;
+    background-color: yellow;
+    display: flex;
+    flex-direction: column;
+    font-family: Gloria Hallelujah, sans-serif;
+}
+
+h1 {
+    text-align: center;
+    margin-top: 20px;
+}
+
+h2 {
+    font-size: 150%;
+    text-transform: uppercase;
+    color: red;
+}
+
+container {
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: aquamarine;
+    border-radius: 10px;
+    box-shadow: 3px 3px black;
+} 
+
+/* Game Area */
+
+#board {
+    background-color: blue;
+    margin: 20px 50px;
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    cursor: pointer;
+}
+
+.cell {
+    width: 150px;
+    height: 150px;
+    font-size: 7em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 3px solid;
+}
+
+/* Buttons */
+
+#buttons {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+
+button {
+    margin: 20px;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 3px 3px black;
+    font-family: Gloria Hallelujah, sans-serif;
+    font-size: 1em;
+    cursor: pointer;
+}
+
+.hidden {
+    display: none;
+}
+
+
