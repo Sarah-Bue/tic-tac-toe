@@ -21,6 +21,8 @@ const buttonSound = new Audio ("assets/audio/button.mp3")
 cells.forEach((cell) => cell.addEventListener("click", playClick));
 buttons.forEach((button) => button.addEventListener("click", playButton));
 resetButton.addEventListener("click", startGame);
+muteButton.addEventListener("click", muteSound);
+gameModeButton.addEventListener("click", switchGameMode);
 
 
                                     // Functions
@@ -40,7 +42,7 @@ function muteSound() {
     // mute sound
 }
 
-function gameMode() {
+function switchGameMode() {
     // switch between pvp and pvc game mode
 }
 
