@@ -20,6 +20,7 @@ const buttonSound = new Audio ("assets/audio/button.mp3")
                                     // Event Listeners
 cells.forEach((cell) => cell.addEventListener("click", playClick));
 buttons.forEach((button) => button.addEventListener("click", playButton));
+resetButton.addEventListener("click", startGame);
 
 
                                     // Functions
@@ -34,3 +35,42 @@ function playButton() {
 function playVictory() {
     victorySound.play();
 }
+
+function muteSound() {
+    // mute sound
+}
+
+function gameMode() {
+    // switch between pvp and pvc game mode
+}
+
+function startGame() {
+    // set player to X
+    // set game to running
+    // clear board
+}
+
+function clickCell() {
+    // Mark cell
+    // change turn
+}
+
+function changeTurn() {
+   // switch between X and O player and symbol
+}
+
+function checkWinner() {
+    // check if winning conditions are met
+}
+
+function checkDraw() {
+    // check if draw conditions are met
+    // unhide status text
+}
+
+function announceWinner() {
+    // announce who won
+    // unhide status text
+}
+
+                                    // Start Game
