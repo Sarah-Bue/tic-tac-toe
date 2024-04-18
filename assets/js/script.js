@@ -96,11 +96,11 @@ function startGame() {
 }
 
 /**
- * This function updates a cell when clicked
- * Only empty cells can be updated
- * When clicked, the current player's symbol appears in a cell
- * It then changes to the nex player's turn
- * Lastly, it checks for a win or draw
+ * This function updates a cell when clicked.
+ * Only empty cells can be updated.
+ * When clicked, the current player's symbol appears in a cell.
+ * It then changes to the nex player's turn.
+ * Lastly, it checks for a win or draw.
  */
 function clickCell(event) {
     // don't update if cell is not empty
@@ -167,8 +167,8 @@ function checkWinner() {
         console.log("we have a winner");
     }
 
-        // If no Winner, check for a Draw
-        //checkDraw();
+    // If no Winner, check for a Draw
+    checkDraw();
 }
 
 /**
