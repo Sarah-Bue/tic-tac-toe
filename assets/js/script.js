@@ -9,6 +9,8 @@ const statusText = document.getElementById("status-text");
 const muteButton = document.getElementById("mute-button");
 const resetButton = document.getElementById("reset-button");
 const gameModeButton = document.getElementById("game-mode-button");
+const feedbackButton = document.getElementById("feedback-button");
+const closeFeedbackButton = document.getElementById("close-feedback-button");
 
                                     // Game Elements
 const player_X = "X";
@@ -44,8 +46,22 @@ buttons.forEach((button) => button.addEventListener("click", playButton));
 resetButton.addEventListener("click", startGame);
 muteButton.addEventListener("click", muteSound);
 gameModeButton.addEventListener("click", switchGameMode);
+feedbackButton.addEventListener("click", openPopup);
+closeFeedbackButton.addEventListener("click", closePopup);
 
                                     // Functions
+
+function openPopup() {
+    document.getElementById("popup-feedback").style.display = "block";
+    document.getElementById("feedback-button").style.display = "none";
+}
+
+function closePopup() {
+    document.getElementById("popup-feedback").style.display = "none";
+    document.getElementById("feedback-button").style.display = "block";
+
+}
+
 /**
  * This function plays the "clickSound" sound
  */
