@@ -50,7 +50,7 @@ section {
     border-radius: 10px;
     box-shadow: 3px 3px black;
 }
-                                        /* Popup Form Styles */
+                                        /* Popup Styles */
 form {
     background-color: blue;
     margin: 20px 50px;
@@ -71,6 +71,10 @@ form h2 {
 }
 
 #popup-feedback {
+    display: none;
+}
+
+#popup-instructions {
     display: none;
 }
 
@@ -130,7 +134,8 @@ button:hover {
     color: white;
 }
 
-#close-feedback-button {
+#close-feedback-button,
+#close-instructions-button{
     padding: 5px;
     border-radius: 50%;
     position: absolute;

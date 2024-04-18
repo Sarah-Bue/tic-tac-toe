@@ -11,6 +11,8 @@ const resetButton = document.getElementById("reset-button");
 const gameModeButton = document.getElementById("game-mode-button");
 const feedbackButton = document.getElementById("feedback-button");
 const closeFeedbackButton = document.getElementById("close-feedback-button");
+const instructionsButton = document.getElementById("instructions-button");
+const closeInstructionsButton = document.getElementById("close-instructions-button");
 
                                     // Game Elements
 const player_X = "X";
@@ -46,20 +48,33 @@ buttons.forEach((button) => button.addEventListener("click", playButton));
 resetButton.addEventListener("click", startGame);
 muteButton.addEventListener("click", muteSound);
 gameModeButton.addEventListener("click", switchGameMode);
-feedbackButton.addEventListener("click", openPopup);
-closeFeedbackButton.addEventListener("click", closePopup);
+feedbackButton.addEventListener("click", openFeedbackPopup);
+closeFeedbackButton.addEventListener("click", closeFeedbackPopup);
+instructionsButton.addEventListener("click", openInstructionsPopup);
+closeInstructionsButton.addEventListener("click", closeInstructionsPopup);
 
                                     // Functions
 
-function openPopup() {
+function openFeedbackPopup() {
     document.getElementById("popup-feedback").style.display = "block";
+    document.getElementById("feedback-button").style.display = "none";
+    document.getElementById("instructions-button").style.display = "none";
+}
+
+function closeFeedbackPopup() {
+    document.getElementById("popup-feedback").style.display = "none";
+    document.getElementById("feedback-button").style.display = "block";
+}
+
+function openInstructionsPopup() {
+    document.getElementById("popup-instructions").style.display = "block";
+    document.getElementById("instructions-button").style.display = "none";
     document.getElementById("feedback-button").style.display = "none";
 }
 
-function closePopup() {
-    document.getElementById("popup-feedback").style.display = "none";
-    document.getElementById("feedback-button").style.display = "block";
-
+function closeInstructionsPopup() {
+    document.getElementById("popup-instructions").style.display = "none";
+    document.getElementById("instructions-button").style.display = "block";
 }
 
 /**
