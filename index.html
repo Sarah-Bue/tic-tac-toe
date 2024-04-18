@@ -24,7 +24,7 @@
 
 <body>
 
-    <container>
+    <section>
 
         <h1>Tic Tac Toe</h1>
     
@@ -40,7 +40,7 @@
             <div class="cell" data-cell-index="8"></div>
         </div>
     
-        <h2 id="status-text" class ="hidden">The winner is...!</h2>
+        <h2 id="status-text" class ="hidden"></h2>
         
         <div id="buttons">
             <button class="button" id="mute-button">Mute Sound</button>
@@ -48,9 +48,45 @@
             <button class="button" id="reset-button">New Game</button>
 
             <button class="button" id="game-mode-button">Game Mode</button>
+        </div>    
+    </section>
+
+    <section>
+
+        <button class="button" id="feedback-button">Feedback</button>
+
+        <div id="popup-feedback">
+            <div>
+                <button class="button" id="close-feedback-button" type="button">X</button>
+            </div>
+
+            <form id="feedback-form" action="https://formdump.codeinstitute.net" method="POST">
+                                
+                <h2>What do you think?</h2>
+
+                <div>
+                    <label for="name">Name</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+
+                <div>
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+
+                <div>
+                    <label for="comment">Comment</label>
+                    <textarea id="comment" name="comment" rows="3" required></textarea>
+                </div>
+
+                <div>
+                    <button class="button" type="submit">Submit</button>
+                </div>
+            </form>
         </div>
-    
-    </container>
+    </section>
+
+
 
     <!-- JS Script -->
     <script src="assets/js/script.js"></script>

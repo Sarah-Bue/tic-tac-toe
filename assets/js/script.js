@@ -112,12 +112,23 @@ function startGame() {
  * Lastly, it checks for a win or draw.
  */
 function clickCell(event) {
-    // don't update if cell is not empty
+    // Only update empty cells
     const clickedCell = event.target;
-
     if (clickedCell.innerText) {
         return;
     }
+
+    /* 
+    // Exit function (don't update cells) if there is a winner
+    if (roundWon) {
+        return;
+    }
+
+    //Exit function (don't update cells) if there is a draw
+    if (isFull) {
+        return;
+    } */
+
     // update cell with current player's symbol
     clickedCell.innerText = currPlayer;
 
@@ -244,6 +255,7 @@ function announceDraw() {
 
 /**
  * This function locks the board when a winner or a draw has been achieved.
+ * No marks can be placed when the board is locked
  */
 function lockBoard() {
     
