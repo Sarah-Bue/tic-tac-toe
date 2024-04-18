@@ -91,8 +91,12 @@ function startGame() {
     currPlayer = player_X;
     // clear board
     cells.forEach((cell) => (cell.innerText = ""));
+    board = ["", "", "", "", "", "", "", "", "",];
+
     // game not over
     gameOver = false;
+        // unhide status text
+        statusText.className = "hidden";
 }
 
 /**
@@ -105,7 +109,6 @@ function startGame() {
 function clickCell(event) {
     // don't update if cell is not empty
     const clickedCell = event.target;
-    // const cellIndex = clickedCell.getAttribute("data-cell-index");
 
     if (clickedCell.innerText) {
         return;
@@ -113,11 +116,20 @@ function clickCell(event) {
     // update cell with current player's symbol
     clickedCell.innerText = currPlayer;
 
-    console.log(clickedCell);
+    // get index of clicked cell
+    const cellIndex = Array.from(cells).indexOf(clickedCell);
+
+    // update the board array with current player's symbol
+    board[cellIndex] = currPlayer;
+
+    // console.log(board);
+
     // change turn function
     changeTurn();
+
     // check winner function
     checkWinner();
+
     // check draw function
     checkDraw();
 }
@@ -165,6 +177,7 @@ function checkWinner() {
 
     if (roundWon) {
         console.log("we have a winner");
+        announceWinner();
     }
 
     // If no Winner, check for a Draw
@@ -189,7 +202,6 @@ function checkDraw() {
     }
 }
 
-
 /**
  * This function announces if a win has been achieved
  * It plays the "playVictory" sound
@@ -203,6 +215,12 @@ function announceWinner() {
     statusText.className = "visible";
 
     // update status text
+    if (currPlayer == player_X) {
+        currPlayer == player_O;
+    }
+    else {
+        currPlayer = player_X;
+    }
     statusText.innerText = `The winner is ${currPlayer}!`
 }
 
