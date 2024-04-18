@@ -1,8 +1,9 @@
-// When page is loaded, set sound to unmute and game to start
-
+// Wait for DOM to finish loading before starting the game
+document.addEventListener("DOMContentLoaded", function () {
+    startGame();
+})
                                     // HTML Elements
 const cells = document.querySelectorAll(".cell");
-// const board = document.getElementById("board");                     // unused
 const buttons = document.querySelectorAll(".button");
 const statusText = document.getElementById("status-text");
 const muteButton = document.getElementById("mute-button");
@@ -70,7 +71,7 @@ function playVictory() {
  * This function mutes all sounds
  */
 function muteSound() {
-    // unmute when clicked again and sound is currently muted ? 
+                                                 // unmute when clicked again and sound is currently muted ? 
     clickSound.muted = true;
     victorySound.muted = true;
     buttonSound.muted = true;
@@ -84,7 +85,10 @@ function switchGameMode() {
 }
 
 /**
- * This function (re-)starts the game by resetting the board to empty and setting the turn to be player_X 
+ * This function (re-)starts the game.
+ * The board is (re-) set to empty.
+ * The turn is set to player_X
+ * The status-text is set to hidden.
  */
 function startGame() {
     // set Player to X
@@ -95,8 +99,9 @@ function startGame() {
 
     // game not over
     gameOver = false;
-        // unhide status text
-        statusText.className = "hidden";
+
+    // hide status text
+    statusText.className = "hidden";
 }
 
 /**
@@ -122,8 +127,6 @@ function clickCell(event) {
     // update the board array with current player's symbol
     board[cellIndex] = currPlayer;
 
-    // console.log(board);
-
     // change turn function
     changeTurn();
 
@@ -138,8 +141,7 @@ function clickCell(event) {
  * This function changes to the next player's turn based on the current player
  */
 function changeTurn() {
-    // currPlayer === player_X ? currPlayer = player_0 : currPlayer = player_X
-    if (currPlayer === player_X) {
+    if (currPlayer === player_X) {                                  // currPlayer = (currPlayer == player_X) ? player_0 : player_X;
         currPlayer = player_O;
     }
     else {
@@ -148,15 +150,15 @@ function changeTurn() {
 }
 
 /**
- * This function checks if a win has been achieved
- * It compares the board against the winning combinations defined in winningCells
- * If no win is achieved, it checks for a draw
- * If a win is achieved, it announces a winner
+ * This function checks if a win has been achieved.
+ * It compares the board against the winning combinations defined in winningCells.
+ * If no win is achieved, it checks for a draw.
+ * If a win is achieved, it announces a winner by unhiding the status-text.
  */
 function checkWinner() {    
     let roundWon = false;
 
-    // for (let winningCell of winningCells) {         // for (let i = 0; i < winningCells.length; i++) 
+                                            // for (let winningCell of winningCells) {         // for (let i = 0; i < winningCells.length; i++) 
     for (let i = 0; i < winningCells.length; i++) {
         const combo = winningCells[i];
         const cellA = board[combo[0]];
@@ -176,7 +178,6 @@ function checkWinner() {
     }
 
     if (roundWon) {
-        console.log("we have a winner");
         announceWinner();
     }
 
@@ -185,8 +186,9 @@ function checkWinner() {
 }
 
 /**
- * This function checks for a draw
- * If a draw is achieved, it announces a draw
+ * This function checks for a draw.
+ * A draw is achieved when all cells are filled and no winner is present.
+ * If a draw is achieved, it announces a draw by unhiding the status-text.
  */
 function checkDraw() {
     var isFull = true;
@@ -216,12 +218,12 @@ function announceWinner() {
 
     // update status text
     if (currPlayer == player_X) {
-        currPlayer == player_O;
+        currPlayer = player_O;
     }
     else {
         currPlayer = player_X;
     }
-    statusText.innerText = `The winner is ${currPlayer}!`
+    statusText.innerText = `The winner is ${currPlayer}!`;
 }
 
 /**
@@ -240,5 +242,9 @@ function announceDraw() {
     statusText.innerText = "Draw!";
 }
 
-                                    // Start Game
-// startGame(); 
+/**
+ * This function locks the board when a winner or a draw has been achieved.
+ */
+function lockBoard() {
+    
+}
