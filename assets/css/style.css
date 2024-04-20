@@ -42,6 +42,7 @@ h2 {
 }
 
 section {
+    max-width: 100vw;
     margin: 10px auto;
     position: relative;
     display: flex;
@@ -69,7 +70,6 @@ i {
     justify-content: space-between;
 }
 
-
                                         /* Popup Styles */
 form {
     background-color: blue;
@@ -96,13 +96,6 @@ form h2,
     display: none;
  }
 
-/* #popup-instructions li {
-    list-style: none;
-    text-align: center;
-} */
-
-
-
                                         /* Game Area */
 
 #board {
@@ -120,7 +113,18 @@ form h2,
     display: flex;
     justify-content: center;
     align-items: center;
-    border: 3px solid;
+    border-right: 3px solid;
+    border-bottom: 3px solid;
+}
+
+/* Remove outer borders: right */
+.cell:nth-child(3n) {
+    border-right: none;
+}
+
+/* Remove outer borders: bottom */
+.cell:nth-child(6) ~ .cell {
+    border-bottom: none;
 }
 
 .cell:hover {
