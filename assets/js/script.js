@@ -47,26 +47,33 @@ cells.forEach((cell) => cell.addEventListener("click", (event) => {
 buttons.forEach((button) => button.addEventListener("click", playButton));
 resetButton.addEventListener("click", startGame);
 muteButton.addEventListener("click", muteSound);
-gameModeButton.addEventListener("click", switchGameMode);
 feedbackButton.addEventListener("click", openFeedbackPopup);
 closeFeedbackButton.addEventListener("click", closeFeedbackPopup);
 instructionsButton.addEventListener("click", openInstructionsPopup);
 closeInstructionsButton.addEventListener("click", closeInstructionsPopup);
 
                                     // Functions
-
+/**
+ * This function opens the "Feedback" popup.
+ */
 function openFeedbackPopup() {
     document.getElementById("popup-feedback").style.display = "block";
     document.getElementById("feedback-button").style.display = "none";
     document.getElementById("instructions-button").style.display = "none";
 }
 
+/**
+ * This function hides the "Feedback" popup.
+ */
 function closeFeedbackPopup() {
     document.getElementById("popup-feedback").style.display = "none";
     document.getElementById("feedback-button").style.display = "block";
     document.getElementById("instructions-button").style.display = "block";
 }
 
+/**
+ * This function opes the "Instructions" popup.
+ */
 function openInstructionsPopup() {
     document.getElementById("popup-instructions").style.display = "block";
     document.getElementById("instructions-button").style.display = "none";
@@ -75,6 +82,9 @@ function openInstructionsPopup() {
 
 }
 
+/**
+ * This function hides the "Instructions" popup.
+ */
 function closeInstructionsPopup() {
     document.getElementById("popup-instructions").style.display = "none";
     document.getElementById("instructions-button").style.display = "block";
@@ -114,13 +124,6 @@ function muteSound() {
 }
 
 /**
- * This function switches between the two game modes: Player-vs-Player and Player-vs-Computer
- */
-function switchGameMode() {
-    // switch between pvp and pvc game mode
-}
-
-/**
  * This function (re-)starts the game.
  * The board is (re-) set to empty.
  * The turn is set to player_X
@@ -155,7 +158,7 @@ function clickCell(event) {
     }
 
     /* 
-    // Exit function (don't update cells) if there is a winner
+                                                        // Exit function (don't update cells) if there is a winner
     if (roundWon) {
         return;
     }

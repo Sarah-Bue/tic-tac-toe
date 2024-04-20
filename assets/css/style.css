@@ -65,20 +65,25 @@ form div {
     flex-direction: column;
 }
 
-form h2 {
+form h2,
+#popup-instructions h2 {
     font-size: 120%;
     text-transform: none;
     text-align: center;
     margin-top: 10px;
 }
 
-#popup-feedback {
-    display: none;
-}
-
+#popup-feedback,
 #popup-instructions {
     display: none;
+ }
+
+#popup-instructions li {
+    list-style: none;
+    text-align: center;
 }
+
+
 
                                         /* Game Area */
 
@@ -137,11 +142,25 @@ button:hover {
     color: white;
 }
 
-#close-instructions-button{
-    padding: 5px;
+#close-instructions-button {
+/*     padding: 5px;
     border-radius: 50%;
     position: absolute;
     top: -40px;
-    right: -30px;
+    right: -30px; */
 }
 
+/* Media Query: laptops and larger screens (992px and up)
+@media screen and (min-width: 992px) {
+
+   /*  body {
+        flex-direction: row;
+    } 
+
+
+
+
+
+
+
+}  */
