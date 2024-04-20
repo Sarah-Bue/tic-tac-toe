@@ -58,8 +58,8 @@ closeInstructionsButton.addEventListener("click", closeInstructionsPopup);
  */
 function openFeedbackPopup() {
     document.getElementById("popup-feedback").style.display = "block";
+    document.getElementById("close-feedback-button").style.display = "block";
     document.getElementById("feedback-button").style.display = "none";
-    document.getElementById("instructions-button").style.display = "none";
 }
 
 /**
@@ -69,6 +69,7 @@ function closeFeedbackPopup() {
     document.getElementById("popup-feedback").style.display = "none";
     document.getElementById("feedback-button").style.display = "block";
     document.getElementById("instructions-button").style.display = "block";
+    document.getElementById("close-feedback-button").style.display = "none";
 }
 
 /**
@@ -77,9 +78,7 @@ function closeFeedbackPopup() {
 function openInstructionsPopup() {
     document.getElementById("popup-instructions").style.display = "block";
     document.getElementById("instructions-button").style.display = "none";
-    document.getElementById("feedback-button").style.display = "none";
     document.getElementById("close-instructions-button").style.display = "block";
-
 }
 
 /**
@@ -118,6 +117,7 @@ function playVictory() {
  */
 function muteSound() {
                                                  // unmute when clicked again and sound is currently muted ? 
+    
     clickSound.muted = true;
     victorySound.muted = true;
     buttonSound.muted = true;
@@ -141,7 +141,31 @@ function startGame() {
 
     // hide status text
     statusText.className = "hidden";
+
+    setHoverText();
 }
+                                                                                    // Why is it only Os, and why not on the first click?
+/**
+ * This function places a preview of the current player's symbol in a cell when hovering over the cell.
+ */
+function setHoverText() {
+    const cell = event.target;
+    //remove all hover text
+    cells.forEach((celll) => {
+      cell.classList.remove("x-hover");
+      cell.classList.remove("o-hover");
+    });
+  
+    // apply hover class based on current player's symbol
+    const hoverClass = `${currPlayer.toLowerCase()}-hover`;
+  
+    cells.forEach((cell) => {
+      if (cell.innerText == "") {
+        cell.classList.add(hoverClass);
+      }
+    });
+  }
+
 
 /**
  * This function updates a cell when clicked.
@@ -156,34 +180,24 @@ function clickCell(event) {
     if (clickedCell.innerText) {
         return;
     }
-
-    /* 
-                                                        // Exit function (don't update cells) if there is a winner
-    if (roundWon) {
+                                                                // Don't update cells if statusText is visible
+/*     if ( statusText.className = "visible") {
         return;
     }
-
-    //Exit function (don't update cells) if there is a draw
-    if (isFull) {
-        return;
-    } */
-
+ */   
     // update cell with current player's symbol
     clickedCell.innerText = currPlayer;
 
-    // get index of clicked cell
+    // get index of clicked cell and update with current player's symbol
     const cellIndex = Array.from(cells).indexOf(clickedCell);
-
-    // update the board array with current player's symbol
     board[cellIndex] = currPlayer;
 
-    // change turn function
     changeTurn();
 
-    // check winner function
+    setHoverText();
+
     checkWinner();
 
-    // check draw function
     checkDraw();
 }
 
@@ -197,7 +211,11 @@ function changeTurn() {
     else {
         currPlayer = player_X;
     }
+
+    setHoverText();
+
 }
+
 
 /**
  * This function checks if a win has been achieved.
@@ -236,9 +254,9 @@ function checkWinner() {
 }
 
 /**
- * This function checks for a draw.
- * A draw is achieved when all cells are filled and no winner is present.
- * If a draw is achieved, it announces a draw by unhiding the status-text.
+ * This function checks for a Draw.
+ * A Draw is achieved when all cells are filled and no winner is present.
+ * If a Draw is achieved, it announces a Draw by unhiding the status-text.
  */
 function checkDraw() {
     var isFull = true;
@@ -277,8 +295,8 @@ function announceWinner() {
 }
 
 /**
- * * This function announces if a draw has been achieved
- * It plays the "playVictory" sound
+ * * This function announces if a Draw has been achieved.
+ * It plays the "playVictory" sound.
  * It unhides the "status-text" and updates it to display "Draw!"
  */
 function announceDraw() {
@@ -293,7 +311,7 @@ function announceDraw() {
 }
 
 /**
- * This function locks the board when a winner or a draw has been achieved.
+ * This function locks the board when a winner or a Draw has been achieved.
  * No marks can be placed when the board is locked
  */
 function lockBoard() {

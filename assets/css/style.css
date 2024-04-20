@@ -42,8 +42,10 @@ h2 {
 }
 
 section {
-    max-width: 100vw;
-    margin: 10px auto;
+/*     max-width: 100vw;
+    margin: 10px auto; */
+    margin: 20px;
+    padding: 20px;  
     position: relative;
     display: flex;
     flex-direction: column;
@@ -72,8 +74,10 @@ i {
 
                                         /* Popup Styles */
 form {
-    background-color: blue;
+    background-color: pink;
     margin: 20px 50px;
+    justify-content: center;
+    width: auto;
 }
 
 form div {
@@ -88,8 +92,8 @@ form h2,
     font-size: 120%;
     text-transform: none;
     text-align: center;
-    margin-top: 10px;
-}
+/*     margin-top: 10px;
+ */}
 
 #popup-feedback,
 #popup-instructions {
@@ -128,8 +132,20 @@ form h2,
 }
 
 .cell:hover {
-    color:white;
+    background-color: pink;
     opacity: 0.5;
+}
+
+.x-hover:hover::after {
+    content: "X";
+    opacity: 0.5;
+    color: white;
+}
+  
+.o-hover:hover::after {
+    content: "O";
+    opacity: 0.5;
+    color: white;
 }
 
 .hidden {
@@ -164,21 +180,31 @@ button:hover {
     color: white;
 }
 
-#feedback-button {
-    align-self: flex-end;
+button i:hover {                                        /* how to make the image switch colors when the button is hovered, not just the image ?*/
+    color: white;
 }
 
 /* Media Query: laptops and larger screens (992px and up)
 @media screen and (min-width: 992px) {
 
    /*  body {
-        flex-direction: row;
+        width: 100vw;
+        min-height: 100vh;
     } 
 
+    section {
+        max-width: 100vw;
+        margin: 10px auto;
+    }   
 
+    #board {
+        margin: 20px 50px;
+        display: grid;
+    }
 
-
-
-
-
-}  */
+    .cell {
+        width: 150px;
+        height: 150px;
+        font-size: 7em;
+    }
+  }  */

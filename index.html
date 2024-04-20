@@ -20,13 +20,12 @@
 
     <!-- Title -->
     <title>Tic Tac Toe</title>
-
 </head>
 
 <body>
-<header>
-    <h1>Tic Tac Toe</h1>
-</header>
+    <header>
+        <h1>Tic Tac Toe</h1>
+    </header>
 
     <!-- Main area that holds the game-->
     <section>
@@ -55,54 +54,58 @@
             <button class="button hidden" id="close-instructions-button" type="button">Close</button>
 
             <button class="button" id="feedback-button">Feedback</button>
+            <button class="button hidden" id="close-feedback-button" type="button">Close</button>
 
+       </div>
+
+       <div>
+            <!-- Popup Feedback -->
+            <div id="popup-feedback">
+                <form id="feedback-form" action="https://formdump.codeinstitute.net" method="POST">
+
+                    <h2>What do you think?</h2>
+
+                    <div>
+                        <label for="name">Name</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+
+                    <div>
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+
+                    <div>
+                        <label for="comment">Comment</label>
+                        <textarea id="comment" name="comment" required></textarea>
+                    </div>
+
+                    <div>
+                        <button class="button" type="submit" id="close-feedback-button">Submit</button>
+                    </div>
+                </form>
+            </div>
+
+            <!-- Popup Instructions -->
+            <div id="popup-instructions">
+                <h2>How to Play</h2>
+                <ul>
+                    <li>Player 1 chooses a cell and marks it with an X.</li>
+                    <li>Player 2 chooses a cell and marks it with an O.</li>
+                    <li>The players take turns until a Win is achieved.</li>
+                    <li>A Win is achieved when one player gets three of their symbols in a row <br> (horizontally, vertically, or
+                        diagonally).</li>
+                    <li>If no Win is achieved, the game ends in a Draw.</li>
+                </ul>
+            </div>
        </div>
     </section>
 
-    <!-- Additional information section -->
-    <section>
-        <!-- Popup Feedback -->
-        <div id="popup-feedback">
-            <form id="feedback-form" action="https://formdump.codeinstitute.net" method="POST">
-
-                <h2>What do you think?</h2>
-                <hr>
-
-                <div>
-                    <label for="name">Name</label>
-                    <input type="text" id="name" name="name" required>
-                </div>
-
-                <div>
-                    <label for="email">Email</label>
-                    <input type="email" id="email" name="email" required>
-                </div>
-
-                <div>
-                    <label for="comment">Comment</label>
-                    <textarea id="comment" name="comment" required></textarea>
-                </div>
-
-                <div>
-                    <button class="button" type="submit" id="close-feedback-button">Submit</button>
-                </div>
-            </form>
-        </div>
-
-        <!-- Popup Instructions -->
-        <div id="popup-instructions">
-            <h2>How to Play</h2>
-            <ul>
-                <li>Player 1 chooses a cell and marks it with an X.</li>
-                <li>Player 2 chooses a cell and marks it with an O.</li>
-                <li>The players take turns until a Win is achieved.</li>
-                <li>A Win is achieved when one player gets three of their symbols in a row <br> (horizontally, vertically, or
-                    diagonally).</li>
-                <li>If no Win is achieved, the game ends in a Draw.</li>
-            </ul>
-        </div>
-    </section>
-
+    <!-- Audio Elements-->                                      <!-- Do I need these here and in JS ???-->
+    <audio src="assets/audio/button.mp3"></audio>
+    <audio src="assets/audio/click.mp3"></audio>
+    <audio src="assets/audio/victory.mp3"></audio>
+    
     <footer>
         <ul id="social-networks">
             <li><a href="https://www.facebook.com/" target="_blank" rel="noopener" aria-label="Visit us on Facebook (opens in a new tab)">
