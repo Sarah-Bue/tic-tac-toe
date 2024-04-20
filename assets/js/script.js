@@ -64,17 +64,22 @@ function openFeedbackPopup() {
 function closeFeedbackPopup() {
     document.getElementById("popup-feedback").style.display = "none";
     document.getElementById("feedback-button").style.display = "block";
+    document.getElementById("instructions-button").style.display = "block";
 }
 
 function openInstructionsPopup() {
     document.getElementById("popup-instructions").style.display = "block";
     document.getElementById("instructions-button").style.display = "none";
     document.getElementById("feedback-button").style.display = "none";
+    document.getElementById("close-instructions-button").style.display = "block";
+
 }
 
 function closeInstructionsPopup() {
     document.getElementById("popup-instructions").style.display = "none";
     document.getElementById("instructions-button").style.display = "block";
+    document.getElementById("close-instructions-button").style.display = "none";
+    document.getElementById("feedback-button").style.display = "block";
 }
 
 /**
