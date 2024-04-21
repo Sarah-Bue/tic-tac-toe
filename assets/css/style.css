@@ -11,7 +11,7 @@
 body {
     width: 100vw;
     min-height: 100vh;
-    background-color: #d6dac8;
+    background-color: #E2E6EA;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -38,7 +38,7 @@ h1 {
 h2 {
     font-size: 150%;
     text-transform: uppercase;
-    color: #fbf3d5;
+    color: #FFB140;
     font-weight: bolder;
 }
 
@@ -52,7 +52,8 @@ section {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: #9cafaa;
+    background-color: #475B63;
+    color: #E2E6EA;
     border-radius: 10px;
     box-shadow: 3px 3px black;
 }
@@ -75,7 +76,7 @@ i {
 
                                         /* Popup Styles */
 form {
-    background-color: #efbc9b;
+    background-color: #986C6A;
     margin: 20px 50px;
     justify-content: center;
     width: auto;
@@ -93,22 +94,23 @@ form h2,
     font-size: 120%;
     text-transform: none;
     text-align: center;
-/*     margin-top: 10px;
- */}
+}
 
 #popup-feedback,
 #popup-instructions {
     display: none;
+    position: absolute;
  }
 
                                         /* Game Area */
 
 #board {
-    background-color: #d6dac8;
+    background-color: #986C6A;
     margin: 20px 50px;
     display: grid;
     grid-template-columns: repeat(3, auto);
     cursor: pointer;
+    position: relative;
 }
 
 .cell {
@@ -121,21 +123,20 @@ form h2,
     border-right: 3px solid;
     border-bottom: 3px solid;
 }
-
-/* Remove outer borders: right */
+/* The code to remove the outher borders was adapted from an article
+by Patricia Nicole Opetina on dev.to */
 .cell:nth-child(3n) {
     border-right: none;
 }
 
-/* Remove outer borders: bottom */
 .cell:nth-child(6) ~ .cell {
     border-bottom: none;
 }
 
-.cell:hover {
+/* .cell:hover {
     background-color: #efbc9b;
     opacity: 0.5;
-}
+} */
 
 .x-hover:hover::after {
     content: "X";
@@ -170,7 +171,7 @@ button {
     margin: 20px;
     padding: 10px;
     border-radius: 10px;
-    background-color: #d6dac8;
+    background-color: #E2E6EA;
     box-shadow: 3px 3px black;
     font-family: "Gloria Hallelujah", sans-serif;
     font-size: 1em;
@@ -179,11 +180,11 @@ button {
 
 button:hover {
     background-color: black;
-    color: #fbf3d5;
+    color: #E2E6EA;
 }
 
 button i:hover {                                        /* how to make the image switch colors when the button is hovered, not just the image ?*/
-    color: #fbf3d5;
+    color: #E2E6EA;
 }
 
 /* Media Query: laptops and larger screens (992px and up)
