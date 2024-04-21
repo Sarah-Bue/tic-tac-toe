@@ -146,6 +146,7 @@ function startGame() {
                                                                                     // Why is it only Os, and why not on the first click?
 /**
  * This function hovers a preview of the current player's symbol in a cell when hovering over the cell.
+ * This function is adapted from Codebrainer.
  */
 function setHoverText() {
     const cell = event.target;
