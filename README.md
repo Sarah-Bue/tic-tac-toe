@@ -41,6 +41,10 @@ The board itself uses a brown-gray color (#986C6A - Rose Taupe), with player mar
 Win / Draw announcements are displayed in a brighter, orance color (#FFB140 - Orange (web)).
 
 ### Typography
+![Type Font Image](assets/readme-files/font.png)
+The site uses Gloria Hallelujah, imported from Google Fonts, as its main font.
+
+The fallback font, in case Gloria Hallelujah isn't loaded correctly, is Sans Serif.
 
 ### Wireframes
 
