@@ -240,13 +240,8 @@ button:hover {
 /* Media Query: laptops and larger screens (992px and up) */
 @media screen and (min-width: 992px) {
     
-    body {
-        width: 100vw;
-        min-height: 100vh;
-    }
-
     section {
-    max-width: 100vw;
+    width: 600px;
     margin: 10px auto;
     margin: 20px;
     padding: 20px;  
