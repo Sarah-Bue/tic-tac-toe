@@ -61,6 +61,8 @@ section {
 li {
     list-style-type: none;
     text-align: center;
+    margin-left: 10px;
+    margin-right: 10px;
 }
 
 i {
@@ -77,7 +79,7 @@ i {
                                         /* Popup Styles */
 form {
     background-color: #986C6A;
-    margin: 20px 50px;
+    margin: 20px;
     justify-content: center;
     width: auto;
 }
@@ -98,8 +100,18 @@ form h2,
 
 #popup-feedback,
 #popup-instructions {
+    z-index: 5;
     display: none;
     position: absolute;
+    background-color: green;
+    top: 100px;
+    left: 10px;
+    right: 10px;
+    margin: auto;
+    box-shadow: 3px 3px black;
+    border-radius: 10px;
+
+
  }
 
                                         /* Game Area */
@@ -132,11 +144,6 @@ by Patricia Nicole Opetina on dev.to */
 .cell:nth-child(6) ~ .cell {
     border-bottom: none;
 }
-
-/* .cell:hover {
-    background-color: #efbc9b;
-    opacity: 0.5;
-} */
 
 .x-hover:hover::after {
     content: "X";

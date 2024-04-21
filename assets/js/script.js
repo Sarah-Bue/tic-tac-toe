@@ -273,7 +273,7 @@ function checkDraw() {
             break;
         }
     }
-    
+
     if (isFull && !gameOver) {
         gameOver = true;
         announceDraw();

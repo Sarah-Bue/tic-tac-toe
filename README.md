@@ -33,6 +33,12 @@
 ### User Stories
 
 ### Color Scheme
+![Color Scheme Image](assets/readme-files/palette.png)
+The body of the website uses an off-white color (#E2E6EA - Anti-Flash White), combined with a medium gray color (#475B63 - Payne's Gray) for the main area.
+
+The board itself uses a brown-gray color (#986C6A - Rose Taupe), with player marks and grids displaying in the off-white color of the body.
+
+Win / Draw announcements are displayed in a brighter, orance color (#FFB140 - Orange (web)).
 
 ### Typography
 
