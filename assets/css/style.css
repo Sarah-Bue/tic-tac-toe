@@ -86,7 +86,7 @@ img {
 
 a {
     text-decoration: none;
-    color: #FFB140;
+    color: #986C6A;
     text-align: center;
 }
 
@@ -96,7 +96,7 @@ a:hover {
 
                                         /* Popup Styles */
 form {
-    background-color: #986C6A;
+    background-color: #475B63;
     margin: 20px;
     justify-content: center;
     width: auto;
@@ -121,13 +121,14 @@ form h2,
     z-index: 5;
     display: none;
     position: absolute;
-    background-color: green;
+    background-color: #475B63;
     top: 100px;
     left: 10px;
     right: 10px;
     margin: auto;
     box-shadow: 3px 3px black;
     border-radius: 10px;
+    border: 2px solid black;
 
 
  }
