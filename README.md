@@ -47,6 +47,7 @@ Visit the deployed website [here](https://sarah-bue.github.io/tic-tac-toe/).
 - As a user, I want to be able to play the game on different devices.
 
 ### Color Scheme
+
 ![Color Scheme Image](assets/readme-files/palette.png)
 The body of the website uses an off-white color (#E2E6EA - Anti-Flash White), combined with a medium gray color (#475B63 - Payne's Gray) for the main area.
 
@@ -55,6 +56,7 @@ The board itself uses a brown-gray color (#986C6A - Rose Taupe), with player mar
 Win / Draw announcements are displayed in a brighter, orance color (#FFB140 - Orange (web)).
 
 ### Typography
+
 ![Type Font Image](assets/readme-files/font.png)
 The site uses Gloria Hallelujah, imported from Google Fonts, as its main font.
 
@@ -72,6 +74,65 @@ Instructions | ![Wireframe Instructions Desktop Image](assets/wireframes/wf-inst
 [Back to top ⇧](#tic-tac-toe)
 
 ## Features
+### General
+- The site was built using a mobile-first approach. 
+- Media queries were used to adapt features for larger screens to ensure responsive designs across different screen sizes. 
+
+**Header**
+
+![Header Image](assets/readme-files/header.png)
+- The header contains the name of the website, which is identical to the name of the game.
+
+**Footer**
+
+![Footer Image](assets/readme-files/footer.png)
+- The footer contains links to the website's social media channels.
+
+### Board Area
+**Board**
+
+![Clear Board Image](assets/readme-files/board-clear.png)
+- The board starts out with all cells being empty.
+- When pressing the "New Game" button, the board returns to this state.
+- Instructions and Feedback Popups are hidden by default.
+- If the game is unmuted, a sound will be heard when clicking the cells, and a different sound when clicking the buttons.
+
+**Hover Effect**
+
+![Board Hover Effect Image](assets/readme-files/board-hover.png)
+- When hovering over a cell, a slightly transparent version of the current player's symbol appears to indicate whose turn it is.
+- The symbol changes depending on the current player; varying between X and O.
+
+**Win / Draw Announcement**
+
+![Win Board Image](assets/readme-files/board-win.png)
+- When a Win or a Draw is achieved, an announcement appears below the board.
+- The announcement changes depending on which player won.
+- If the game is unmuted, a victory sound will be played.
+
+### Popups
+**Instructions Popup**
+
+![Instructions Image](assets/readme-files/popup-instructions.png)
+- Clicking on the "Instructions" button opens the "Instructions" popup.
+- It overlaps the board to focus the player's attention on the rules.
+- Images showcase the different ways the game can be won.
+- When the "Instructions" popup is open, the "Instructions" button below the board is hidden.
+- The section can be closed by using the "X" button in the top right corner. This will make the original button reappear below the board.
+
+**Feedback Popup**
+
+![Feedback Image](assets/readme-files/popup-feedback.png)
+- Clicking on the "Feedback" button opens the "Feedback" popup.
+- It overlaps the board to focus the player's attention on the form.
+- The form allows the player to provide feedback about their experience with the game.
+- When the "Feedback" popup is open, the "Feedback" button below the board is hidden.
+- The section can be closed by using the "X" button in the top right corner. This will make the original button reappear below the board.
+
+### 404 Page
+
+![404 Page](assets/readme-files/404-desktop.png)
+- This page is displayed in case of broken or misspelled links, and contains a link back to the main page.
 
 [Back to top ⇧](#tic-tac-toe)
 

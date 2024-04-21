@@ -237,8 +237,8 @@ button:hover {
     border-radius: 50%;
 }
 
-/* Media Query: laptops and larger screens (992px and up) */
-@media screen and (min-width: 992px) {
+/* Media Query: tablets and larger screens (768px and up) */
+@media screen and (min-width: 768px) {
     
     section {
     width: 600px;
