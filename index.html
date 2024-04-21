@@ -46,20 +46,26 @@
 
         <!-- Buttons-->
         <div class="buttons">
-            <button class="button" id="mute-button"><i class="fa-solid fa-volume-xmark"></i></button>
+            <div class="buttons1">
+                <button class="button" id="mute-button">Mute Sound</i></button>
 
-            <button class="button" id="reset-button">New Game</button>
+                <button class="button" id="reset-button">New Game</button>
+            </div>
  
-            <button class="button" id="instructions-button">Instructions</button>
-            <button class="button hidden" id="close-instructions-button" type="button">Close</button>
+            <div class="buttons2">
+                <button class="button" id="instructions-button">Instructions</button>
+                <button class="button hidden" id="close-instructions-button" type="button">X</button>
 
-            <button class="button" id="feedback-button">Feedback</button>
-            <button class="button hidden" id="close-feedback-button" type="button">Close</button>
-
+                <button class="button" id="feedback-button">Feedback</button>
+                <!-- <button class="button hidden" id="submit-button" type="submit">Submit</button> -->
+                <button class="button hidden" id="close-feedback-button" type="button">X</button>
+            </div>
        </div>
 
+
+       <!-- Popup Elements-->
        <div>
-            <!-- Popup Feedback Form -->
+            <!-- Feedback Form -->
             <div id="popup-feedback">
                 <form id="feedback-form" action="https://formdump.codeinstitute.net" method="POST">
 
@@ -81,12 +87,12 @@
                     </div>
 
                     <div>
-                        <button class="button" type="submit" id="close-feedback-button">Submit</button>
+                        <button class="button" type="submit" id="submit-button">Submit</button>
                     </div>
                 </form>
             </div>
 
-            <!-- Popup Instructions -->
+            <!-- Instructions -->
             <div id="popup-instructions">
                 <h2>How to Play</h2>
                 <ul>
@@ -97,6 +103,12 @@
                         diagonally).</li>
                     <li>If no Win is achieved, the game ends in a Draw.</li>
                 </ul>
+
+                <div id="images">
+                    <img class="img" src="assets/images/win-diagonal.png" alt="A tic tac toe board with O winning in the diagonal.">
+                    <img class="img" src="assets/images/win-horizontal.png" alt="A tic tac toe board with X winning in the horizontal.">
+                    <img class="img" src="assets/images/win-vertical.png" alt="A tic tac toe board with O winning in the vertical.">
+                </div>
             </div>
        </div>
     </section>
