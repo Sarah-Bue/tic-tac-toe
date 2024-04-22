@@ -233,12 +233,50 @@ Instructions | ![Wireframe Instructions Desktop Image](assets/wireframes/wf-inst
 **Browser Compatibility**
 Browser | Issues 
 --- | --- 
+Google Chrome | No issues with appearance, responsiveness, or functionality.
+Safari | No issues with appearance, responsiveness, or functionality.
+Mozilla Firefox | No issues with appearance, responsiveness, or functionality.
+Microsoft Edge | No issues with appearance, responsiveness, or functionality.
+JoyUI Native Browser | No issues with appearance, responsiveness, or functionality.
 
 **Device Compatibility**
 Device | Issues 
 --- | --- 
+MacBook Pro 13" | No issues with appearance, responsiveness, or functionality.
+iPhone 13 Mini | No issues with appearance, responsiveness, or functionality.
+iPad 9th Generation | No issues with appearance, responsiveness, or functionality.
+Acer Predator Helios 300 | No issues with appearance, responsiveness, or functionality.
+Black Shark PAR-HOA | No issues with appearance, responsiveness, or functionality.
+Samsung Galaxy S23 | No issues with appearance, responsiveness, or functionality.
 
 **Common Elements Testing**
+
+- Cells
+    - Hovering over a cell will place a translucent X or O, depending on the turn.
+    - Clicking on a cell will place an X or O, depending on the turn.
+    - Clicking on a cell will play a short sound.
+
+- Buttons
+    - Hovering over a button will invert its colors.
+    - Clicking on the "Instructions" or "Feedback" button will open a popup with additional information.
+    - Clicking on the little "X" in the corner of the popups will close them.
+    - Clicking on a button will play a differrent short sound.
+    - Clicking on the "Mute" button will mute the game's audio.
+
+- Board
+    - On smaller devices, a turn indicator above the game board keeps track of whose turn it is.
+    - When a Win or Draw is achieved, a message appears below the board to announce the outcome of the game.
+    - When a Win or Draw is achieved, a short victory sound will play.
+
+- Form
+    - All fields are required to fill out the form.
+    - Submitting the form takes the user to a [formdump page](https://formdump.codeinstitute.net/).
+
+- Footer
+    - Clicking on the social media icons in the footer opens the respective website in a new tab.
+
+- 404 Page
+ - Clicking on the text above the image brings the user back to the main page.
 
 [Back to top ⇧](#tic-tac-toe)
 
@@ -247,7 +285,6 @@ Device | Issues
 Page | Desktop Version | Mobile Version
 --- | --- | ---
 Home | ![Home Desktop Image](assets/readme-files/home-desktop.png) | ![Home Mobile Image](assets/readme-files/home-mobile.png)
-[Mobile Image](assets/readme-files/bookings-mobile.png)
 404 | ![404 Desktop Image](assets/readme-files/404-desktop.png) | ![404 Mobile Image](assets/readme-files/404-mobile.png)
 
 
@@ -294,3 +331,8 @@ The code for the preview-hover function was adapted from [Codebrainer](https://w
 
 ## Acknowledgements
 
+- Code Institute, its tutors, and the Slack community for their support and insights.
+
+- Marcel, my mentor, for his feedback and encouragement.
+
+- My husband for supporting me through every bump and setback. 
