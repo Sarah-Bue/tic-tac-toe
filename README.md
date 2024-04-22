@@ -1,46 +1,46 @@
 # Tic Tac Toe
 ![Tic Tac Toe Image](assets/readme-files/mockups.png)
 
-This website is a simple online version of the classic turn-taking game Tic Tac Toe. Everything the user needs, from starting the game, reading the instructions, and providing feedback, is easily accessible from the main page.
+This website is a simple online version of the classic turn-taking game Tic Tac Toe. Everything the user needs, from starting the game to reading the instructions and providing feedback, is easily accessible from the main page.
 
 Visit the deployed website [here](https://sarah-bue.github.io/tic-tac-toe/).
 
 ## Table of contents
 1. [User Experience (UX)](#user-experience-ux)
-    1. [Project Goals](#project-goals)
-    2. [User Stories](#user-stories)
-    3. [Color Scheme](#color-scheme)
-    4. [Typography](#typography)
-    5. [Wireframes](#wireframes)
+ 1. [Project Goals](#project-goals)
+ 2. [User Stories](#user-stories)
+ 3. [Color Scheme](# color-scheme)
+ 4. [Typography](#typography)
+ 5. [Wireframes](#wireframes)
 2. [Features](#features)
 3. [Technologies Used](#technologies-used)
-    1. [Languages](#languagesd)
-    2. [Frameworks, Libraries, and Programs](#frameworks-libraries-and-programs)
+ 1. [Languages](#languagesd)
+ 2. [Frameworks, Libraries, and Programs](#frameworks-libraries-and-programs)
 4. [Testing](#testing)
-    1. [Testing User Stories](#testing-user-stories)
-    2. [Code Validation](#code-validation)
-    3. [Accessibility](#accessibility)
-    4. [Tools Testing](#tools-testing)
-    5. [Manual Testing](#manual-testing)
+ 1. [Testing User Stories](#testing-user-stories)
+ 2. [Code Validation](#code-validation)
+ 3. [Accessibility](#accessibility)
+ 4. [Tools Testing](#tools-testing)
+ 5. [Manual Testing](#manual-testing)
 5. [Finished Product](#finished-product)
 6. [Deployment](#deployment)
-    1. [GitHub Pages](#github-pages)
+ 1. [GitHub Pages](#github-pages)
 7. [Credits](#credits)
-    1. [Content](#content)
-    2. [Media](#media)
-    3. [Code](#code)
+ 1. [Content](#content)
+ 2. [Media](#media)
+ 3. [Code](#code)
 8. [Acknowledgements](#acknowledgements)
 
 ## User Experience (UX)
 ### Project Goals
-- The website inforporate a responsive design to make the game accessible on different devices.
+- The website incorporates a responsive design to make the game accessible on different devices.
 - The website should provide an intuitive structure and navigation.
 - The website should allow the user to provide feedback about their experience.
 - The website should have a pleasant, coherent design to invite the user to play.
 - The website should provide the user with feedback about their game result.
 
 ### User Stories
-- As a user, I want the webiste to be easy to navigate.
+- As a user, I want the website to be easy to navigate.
 - As a user, I want the game to be fun and engaging.
 - As a user, I want to receive feedback about my performance in the game.
 - As a user, I want to be able to provide feedback about the game and the website.
@@ -50,11 +50,11 @@ Visit the deployed website [here](https://sarah-bue.github.io/tic-tac-toe/).
 ### Color Scheme
 
 ![Color Scheme Image](assets/readme-files/palette.png)
-The body of the website uses an off-white color (#E2E6EA - Anti-Flash White), combined with a medium gray color (#475B63 - Payne's Gray) for the main area.
+The body of the website uses an off-white color (#E2E6EA - Anti-Flash White), combined with a medium grey color (#475B63 - Payne's Gray) for the main area.
 
-The board itself uses a brown-gray color (#986C6A - Rose Taupe), with player marks and grids displaying in the off-white color of the body.
+The board itself uses a brown-grey color (#986C6A - Rose Taupe), with player marks and grids displaying in the off-white color of the body.
 
-Win / Draw announcements are displayed in a brighter, orance color (#FFB140 - Orange (web)).
+Win / Draw announcements are displayed in a brighter, orange color (#FFB140 - Orange (web)).
 
 ### Typography
 
@@ -93,7 +93,7 @@ Instructions | ![Wireframe Instructions Desktop Image](assets/wireframes/wf-inst
 **Board**
 
 ![Clear Board Image](assets/readme-files/board-clear.png)
-- The board starts out with all cells being empty.
+- The board starts with all cells being empty.
 - When pressing the "New Game" button, the board returns to this state.
 - Instructions and Feedback Popups are hidden by default.
 - If the game is unmuted, a sound will be heard when clicking the cells, and a different sound when clicking the buttons.
@@ -144,7 +144,7 @@ Instructions | ![Wireframe Instructions Desktop Image](assets/wireframes/wf-inst
 - [Javascript](https://en.wikipedia.org/wiki/JavaScript)
 
 ### Frameworks, Libraries, and Programs 
-- [Google Fonts](https://fonts.google.com/) was used to find suitable font pairings, as well as link to the fonts in the .html files.
+- [Google Fonts](https://fonts.google.com/) was used to find suitable font pairings, as well import the chosen fonts.
 
 - [Font Awesome](https://fontawesome.com/) was used to add icons in order to create a better visual experience for UX purposes.
 
@@ -174,32 +174,32 @@ Instructions | ![Wireframe Instructions Desktop Image](assets/wireframes/wf-inst
 
 ## Testing
 ### Testing User Stories
-- As a user, I want the webiste to be easy to navigate.
-    - Everything is presented on one page to minimize the need to switch between pages.
-    - Buttons are clearly labelled and easy to find.
+- As a user, I want the website to be easy to navigate.
+ - Everything is presented on one page to minimize the need to switch between pages.
+ - Buttons are clearly labelled and easy to find.
 
 - As a user, I want the game to be fun and engaging.
-    - The website is kept in simple, soothing colors to provide a pleasant experience.
-    - The game is straight-forward and easy to understand.
-    - The game plays sound effects similar to ones used in retro-style games to be fun for the user.
-    - The game provides feedback and a victory sound to keep the user motivated and engaged.
+ - The website is kept in simple, soothing colors to provide a pleasant experience.
+ - The game is straightforward and can be played immediately.
+ - The game plays sound effects similar to ones used in retro-style games to be fun for the user.
+ - The game provides feedback and a victory sound to keep the user motivated and engaged.
 
 - As a user, I want to receive feedback about my performance in the game.
-    - The game provides feedback after a game is won.
-    - At the end of the game, a victory sound plays.
+ - The game provides feedback after a game is won.
+ - At the end of the game, a victory sound plays.
 
 - As a user, I want to be able to provide feedback about the game and the website.
-    - A feedback form is available via the "Feedback" button below the game board.
-    - The user can provide their name and email address, as well as their feedback in the comment field.
+ - A feedback form is available via the "Feedback" button below the game board.
+ - The user can provide their name and email address, as well as their feedback in the comment field.
 
 - As a user, I want to be able to easily review the rules.
-    - The instructions are readily available via the "Instructions" button below the game board.
-    - The instructions are kept clear and concise, and contain images of sample Wins to demonstrate possible outcomes across the different axes.
+ - The instructions are readily available via the "Instructions" button below the game board.
+ - The instructions are kept clear and concise, and contain images of sample Wins to demonstrate possible outcomes across the different axes.
 
 - As a user, I want to be able to play the game on different devices.
-    - The website is fully responsive and displays well across devices of different sizes.
-    - The game is fully interactive on touchscreen devices as well when using a mouse or trackpad.
-    - On smaller screens, where a hover effect is not possible, a visual indicator is used above the board to keep track of which player's turn it is.
+ - The website is fully responsive and displays well across devices of different sizes.
+ - The game is fully interactive on touchscreen devices as well when using a mouse or trackpad.
+ - On smaller screens, where a hover effect is not possible, a visual indicator is used above the board to keep track of which player's turn it is.
 
 ### Code Validation
 [W3C Markup Validator](https://validator.w3.org/), [W3C CSS Validator](https://jigsaw.w3.org/css-validator/), and [JSHint](https://jshint.com/) were used to validate the project to ensure there were no errors in the code.
@@ -222,10 +222,10 @@ Instructions | ![Wireframe Instructions Desktop Image](assets/wireframes/wf-inst
 
 **Lighthouse Reports**
 - Home Page
-    ![Lighthouse Report Home Page Image](assets/readme-files/lighthouse-home.png)
+ ![Lighthouse Report Home Page Image](assets/readme-files/lighthouse-home.png)
 
 - 404 Page
-    ![Lighthouse Report 404 Page Image](assets/readme-files/lighthouse-404.png)
+ ![Lighthouse Report 404 Page Image](assets/readme-files/lighthouse-404.png)
 
 ### Tools Testing
 
@@ -275,7 +275,7 @@ Buttons
 Feature | Outcome | Pass/Fail
 --- | --- | ---
 Hovering over a button | Inverts colors | Pass
-Clicking on a butotn | A short sound is played | Pass
+Clicking on a button | A short sound is played | Pass
 Clicking on the Mute button | The sound is muted / unmuted depending on the current state | Pass
 Clicking on the Mute button | The button text changes between "Play Sound" and "Mute Sound" depending on the state | Pass
 Clicking on the "Instructions" button | A popup opens with additional information | Pass
@@ -297,7 +297,7 @@ Form
 Feature | Outcome | Pass/Fail
 --- | --- | ---
 Input Fields | All fields are required to submit the form | Pass
-Hovering over Submit button | Inverts colors | Pass
+Hovering over the "Submit" button | Inverts colors | Pass
 Form Submission | Form information is taken to Code Institute's [formdump page](https://formdump.codeinstitute.net/) | Pass
 
 
