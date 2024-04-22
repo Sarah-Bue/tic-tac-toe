@@ -155,9 +155,8 @@ function startGame() {
  * This function is adapted from Codebrainer.
  */
 function setHoverText() {
-    const cell = event.target;
     // Remove previous hover text
-    cells.forEach((celll) => {
+    cells.forEach((cell) => {
       cell.classList.remove("x-hover");
       cell.classList.remove("o-hover");
     });
@@ -191,10 +190,8 @@ function clickCell(event) {
         return;
     }
  */   
-    // update cell with current player's symbol
+    // update cell  & index with current player's symbol
     clickedCell.innerText = currPlayer;
-
-    // get index of clicked cell and update with current player's symbol
     const cellIndex = Array.from(cells).indexOf(clickedCell);
     board[cellIndex] = currPlayer;
 
@@ -203,8 +200,6 @@ function clickCell(event) {
     setHoverText();
 
     checkWinner();
-
-    checkDraw();
 }
 
 /**

@@ -1,6 +1,6 @@
 # Tic Tac Toe
 
-This website is a simple online version of the classic turn-taking game Tic Tac Toe. Everything the player needs, from starting the game, reading the instructions, and providing feedback, is easily accessible from the main page.
+This website is a simple online version of the classic turn-taking game Tic Tac Toe. Everything the user needs, from starting the game, reading the instructions, and providing feedback, is easily accessible from the main page.
 
 Visit the deployed website [here](https://sarah-bue.github.io/tic-tac-toe/).
 
@@ -124,8 +124,8 @@ Instructions | ![Wireframe Instructions Desktop Image](assets/wireframes/wf-inst
 
 ![Feedback Image](assets/readme-files/popup-feedback.png)
 - Clicking on the "Feedback" button opens the "Feedback" popup.
-- It overlaps the board to focus the player's attention on the form.
-- The form allows the player to provide feedback about their experience with the game.
+- It overlaps the board to focus the user's attention on the form.
+- The form allows the user to provide feedback about their experience with the game.
 - When the "Feedback" popup is open, the "Feedback" button below the board is hidden.
 - The section can be closed by using the "X" button in the top right corner. This will make the original button reappear below the board.
 
@@ -143,8 +143,7 @@ Instructions | ![Wireframe Instructions Desktop Image](assets/wireframes/wf-inst
 - [Javascript](https://en.wikipedia.org/wiki/JavaScript)
 
 ### Frameworks, Libraries, and Programs 
-- [Google Fonts](https://fonts.google.com/)
-    - Google Fonts was used to find suitable font pairings, as well as link to the fonts in the .html files.
+- [Google Fonts](https://fonts.google.com/) was used to find suitable font pairings, as well as link to the fonts in the .html files.
 
 - [Font Awesome](https://fontawesome.com/) was used to add icons in order to create a better visual experience for UX purposes.
 
