@@ -1,4 +1,5 @@
 # Tic Tac Toe
+![Tic Tac Toe Image](assets/readme-files/mockups.png)
 
 This website is a simple online version of the classic turn-taking game Tic Tac Toe. Everything the user needs, from starting the game, reading the instructions, and providing feedback, is easily accessible from the main page.
 
@@ -173,7 +174,32 @@ Instructions | ![Wireframe Instructions Desktop Image](assets/wireframes/wf-inst
 
 ## Testing
 ### Testing User Stories
+- As a user, I want the webiste to be easy to navigate.
+    - Everything is presented on one page to minimize the need to switch between pages.
+    - Buttons are clearly labelled and easy to find.
 
+- As a user, I want the game to be fun and engaging.
+    - The website is kept in simple, soothing colors to provide a pleasant experience.
+    - The game is straight-forward and easy to understand.
+    - The game plays sound effects similar to ones used in retro-style games to be fun for the user.
+    - The game provides feedback and a victory sound to keep the user motivated and engaged.
+
+- As a user, I want to receive feedback about my performance in the game.
+    - The game provides feedback after a game is won.
+    - At the end of the game, a victory sound plays.
+
+- As a user, I want to be able to provide feedback about the game and the website.
+    - A feedback form is available via the "Feedback" button below the game board.
+    - The user can provide their name and email address, as well as their feedback in the comment field.
+
+- As a user, I want to be able to easily review the rules.
+    - The instructions are readily available via the "Instructions" button below the game board.
+    - The instructions are kept clear and concise, and contain images of sample Wins to demonstrate possible outcomes across the different axes.
+
+- As a user, I want to be able to play the game on different devices.
+    - The website is fully responsive and displays well across devices of different sizes.
+    - The game is fully interactive on touchscreen devices as well when using a mouse or trackpad.
+    - On smaller screens, where a hover effect is not possible, a visual indicator is used above the board to keep track of which player's turn it is.
 
 ### Code Validation
 [W3C Markup Validator](https://validator.w3.org/), [W3C CSS Validator](https://jigsaw.w3.org/css-validator/), and [JSHint](https://jshint.com/) were used to validate the project to ensure there were no errors in the code.
@@ -185,12 +211,21 @@ Instructions | ![Wireframe Instructions Desktop Image](assets/wireframes/wf-inst
  ![CSS Validation Image](assets/readme-files/css-validation.png)
 
 **JavaScript Validation**
-![JavaScript Validation Image](assets/readme-files/js-validation.png)
+
+ ![JavaScript Validation Image](assets/readme-files/js-validation.png)
 
 
 ### Accessibility
 
 **Lighthouse Reports**
+[Lighthouse](https://developer.chrome.com/docs/lighthouse/overview) in [Chrome DevTools](https://developer.chrome.com/docs/devtools/) was used to measure the quality of each page, focussing on performance, accessibility, best practices, and SEO scores.
+
+**Lighthouse Reports**
+- Home Page
+    ![Lighthouse Report Home Page Image](assets/readme-files/lighthouse-home.png)
+
+- 404 Page
+    ![Lighthouse Report 404 Page Image](assets/readme-files/lighthouse-404.png)
 
 ### Tools Testing
 
@@ -211,6 +246,10 @@ Device | Issues
 
 Page | Desktop Version | Mobile Version
 --- | --- | ---
+Home | ![Home Desktop Image](assets/readme-files/home-desktop.png) | ![Home Mobile Image](assets/readme-files/home-mobile.png)
+[Mobile Image](assets/readme-files/bookings-mobile.png)
+404 | ![404 Desktop Image](assets/readme-files/404-desktop.png) | ![404 Mobile Image](assets/readme-files/404-mobile.png)
+
 
 [Back to top ⇧](#tic-tac-toe)
 
