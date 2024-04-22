@@ -141,7 +141,7 @@ function startGame() {
     currPlayer = player_X;
 
     // Update turnTracker
-    turnTracker.textContent = `X's turn`;
+    turnTracker.textContent = `${currPlayer}'s turn`;
     turnTracker.className = "visible";
 
     // Clear board
@@ -156,7 +156,7 @@ function startGame() {
 
     setHoverText();
 }
-                                                                                    // Why is it only Os, and why not on the first click?
+
 /**
  * This function hovers a preview of the current player's symbol in a cell when hovering over the cell.
  * This function is adapted from Codebrainer.
@@ -167,7 +167,7 @@ function setHoverText() {
       cell.classList.remove("x-hover");
       cell.classList.remove("o-hover");
     });
-  
+    if (gameOver == false) {
     // Apply hover class based on current player's symbol
     const hoverClass = `${currPlayer.toLowerCase()}-hover`;
   
@@ -177,7 +177,7 @@ function setHoverText() {
       }
     });
   }
-
+}
 
 /**
  * This function updates a cell when clicked.
@@ -187,26 +187,30 @@ function setHoverText() {
  * Lastly, it checks for a win or draw.
  */
 function clickCell(event) {
-    // Only update empty cells
-    const clickedCell = event.target;
-    if (clickedCell.innerText) {
-        return;
+    if (gameOver == false) {
+        // Only update empty cells
+        const clickedCell = event.target;
+        if (clickedCell.innerText) {
+            return;
+        }
+                                                                    // Don't update cells if statusText is visible
+    /*    if (statusText.className = "visible") {
+            return;
+        }
+        */
+        // update cell  & index with current player's symbol
+        clickedCell.innerText = currPlayer;
+        const cellIndex = Array.from(cells).indexOf(clickedCell);
+        board[cellIndex] = currPlayer;
+
+        console.log(gameOver)
+
+        changeTurn();
+
+        setHoverText();
+
+        checkWinner();
     }
-                                                                // Don't update cells if statusText is visible
-/*     if ( statusText.className = "visible") {
-        return;
-    }
- */   
-    // update cell  & index with current player's symbol
-    clickedCell.innerText = currPlayer;
-    const cellIndex = Array.from(cells).indexOf(clickedCell);
-    board[cellIndex] = currPlayer;
-
-    changeTurn();
-
-    setHoverText();
-
-    checkWinner();
 }
 
 /**
@@ -254,7 +258,8 @@ function checkWinner() {
     }
 
     if (roundWon) {
-        announceWinner(); 
+        announceWinner();
+        gameOver = true;
     }
     else {
     checkDraw(roundWon);
@@ -278,6 +283,7 @@ function checkDraw() {
     if (isFull && !gameOver) {
         gameOver = true;
         announceDraw();
+        setHoverText();
     } 
 }
 
@@ -289,14 +295,14 @@ function checkDraw() {
 function announceWinner() {
     // play Winner sound
     playVictory();
+    gameOver = true
+    setHoverText();
 
     // hide turnTracker
     turnTracker.className = "hidden";
 
-    // unhide status text
+    // unhide and update status text
     statusText.className = "visible";
-
-    // update status text
     if (currPlayer == player_X) {
         currPlayer = player_O;
     }
@@ -314,21 +320,12 @@ function announceWinner() {
 function announceDraw() {
     //play Winner sound
     playVictory();
+    setHoverText();
 
     // hide turnTracker
     turnTracker.className = "hidden";
 
-    // unhide status text
+    // unhide and update status text
     statusText.className = "visible";
-
-    // update status text
     statusText.innerText = "Draw!";
 }
-
-/**
- * This function locks the board when a winner or a Draw has been achieved.
- * No marks can be placed when the board is locked.
- */
-/* function lockBoard() {
-    
-} */

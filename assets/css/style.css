@@ -215,8 +215,7 @@ by Patricia Nicole Opetina on dev.to */
     flex-direction: column;
 }
 
-.buttons1,
-.buttons2 {
+.buttons-flex {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -246,7 +245,7 @@ button:hover {
     z-index: 6;
     border-radius: 50%;
 }
-                                        /* Media Queries*/
+                                        /* Media Queries */
 /* Media Query: tablets and larger screens (768px and up) */
 @media screen and (min-width: 768px) {
     
