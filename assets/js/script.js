@@ -1,6 +1,7 @@
 // Wait for DOM to finish loading before starting the game
 document.addEventListener("DOMContentLoaded", function () {
     startGame();
+    
 });
                                     // HTML Elements
 const cells = document.querySelectorAll(".cell");
@@ -140,8 +141,8 @@ function startGame() {
     currPlayer = player_X;
 
     // Update turnTracker
-    turnTracker.textContent = `${currPlayer}'s turn`;
-  
+    turnTracker.textContent = `X's turn`;
+    turnTracker.className = "visible";
 
     // Clear board
     cells.forEach((cell) => (cell.innerText = ""));

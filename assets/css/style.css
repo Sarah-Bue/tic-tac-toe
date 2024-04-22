@@ -188,13 +188,13 @@ by Patricia Nicole Opetina on dev.to */
 
 .x-hover:hover::after {
     content: "X";
-    opacity: 0.5;
+    opacity: 0.2;
     color: white;
 }
   
 .o-hover:hover::after {
     content: "O";
-    opacity: 0.5;
+    opacity: 0.2;
     color: white;
 }
 
@@ -246,7 +246,7 @@ button:hover {
     z-index: 6;
     border-radius: 50%;
 }
-
+                                        /* Media Queries*/
 /* Media Query: tablets and larger screens (768px and up) */
 @media screen and (min-width: 768px) {
     
@@ -282,3 +282,11 @@ button:hover {
     justify-content: space-around;
 }
   }
+
+  /* Media Query: laptops and larger screens (992px and up) */
+@media screen and (min-width: 992px) {
+    
+    #turn-tracker {
+        display: none;
+    }
+}
