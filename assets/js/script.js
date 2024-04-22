@@ -203,8 +203,6 @@ function clickCell(event) {
         const cellIndex = Array.from(cells).indexOf(clickedCell);
         board[cellIndex] = currPlayer;
 
-        console.log(gameOver)
-
         changeTurn();
 
         setHoverText();
@@ -295,7 +293,7 @@ function checkDraw() {
 function announceWinner() {
     // play Winner sound
     playVictory();
-    gameOver = true
+    gameOver = true;
     setHoverText();
 
     // hide turnTracker

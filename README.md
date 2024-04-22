@@ -176,12 +176,17 @@ Instructions | ![Wireframe Instructions Desktop Image](assets/wireframes/wf-inst
 
 
 ### Code Validation
+[W3C Markup Validator](https://validator.w3.org/), [W3C CSS Validator](https://jigsaw.w3.org/css-validator/), and [JSHint](https://jshint.com/) were used to validate the project to ensure there were no errors in the code.
 
 **HTML Validation**
+ ![HTML Validation Image](assets/readme-files/html-validation.png)
 
 **CSS Validation**
+ ![CSS Validation Image](assets/readme-files/css-validation.png)
 
 **JavaScript Validation**
+![JavaScript Validation Image](assets/readme-files/js-validation.png)
+
 
 ### Accessibility
 
