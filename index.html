@@ -27,97 +27,101 @@
         <h1>Tic Tac Toe</h1>
     </header>
 
-    <!-- Main area that holds the game-->
-    <section>
-        <div id="board">
-            <div class="cell" data-cell-index="0"></div>
-            <div class="cell" data-cell-index="1"></div>
-            <div class="cell" data-cell-index="2"></div>
-            <div class="cell" data-cell-index="3"></div>
-            <div class="cell" data-cell-index="4"></div>
-            <div class="cell" data-cell-index="5"></div>
-            <div class="cell" data-cell-index="6"></div>
-            <div class="cell" data-cell-index="7"></div>
-            <div class="cell" data-cell-index="8"></div>
+    <main>
+        <!-- Game Area -->
+        <section>
+            <!-- Board -->
+            <div id="board">
+                <div class="cell" data-cell-index="0"></div>
+                <div class="cell" data-cell-index="1"></div>
+                <div class="cell" data-cell-index="2"></div>
+                <div class="cell" data-cell-index="3"></div>
+                <div class="cell" data-cell-index="4"></div>
+                <div class="cell" data-cell-index="5"></div>
+                <div class="cell" data-cell-index="6"></div>
+                <div class="cell" data-cell-index="7"></div>
+                <div class="cell" data-cell-index="8"></div>
+            </div>
+
+            <!-- Winner Announcement -->
+            <h2 id="status-text" class="hidden"></h2>
+
+            <!-- Buttons-->
+            <div class="buttons">
+                <div class="buttons1">
+                    <button class="button" id="mute-button">Mute Sound</i></button>
+
+                    <button class="button" id="reset-button">New Game</button>
+                </div>
+    
+                <div class="buttons2">
+                    <button class="button" id="instructions-button">Instructions</button>
+                    <button class="button hidden" id="close-instructions-button" type="button">X</button>
+
+                    <button class="button" id="feedback-button">Feedback</button>
+                    <!-- <button class="button hidden" id="submit-button" type="submit">Submit</button> -->
+                    <button class="button hidden" id="close-feedback-button" type="button">X</button>
+                </div>
         </div>
 
-        <!-- Winner Announcement -->
-        <h2 id="status-text" class="hidden"></h2>
 
-        <!-- Buttons-->
-        <div class="buttons">
-            <div class="buttons1">
-                <button class="button" id="mute-button">Mute Sound</i></button>
+        <!-- Popup Elements-->
+        <div>
+                <!-- Feedback Form -->
+                <div id="popup-feedback">
+                    <form id="feedback-form" action="https://formdump.codeinstitute.net" method="POST">
 
-                <button class="button" id="reset-button">New Game</button>
-            </div>
- 
-            <div class="buttons2">
-                <button class="button" id="instructions-button">Instructions</button>
-                <button class="button hidden" id="close-instructions-button" type="button">X</button>
+                        <h2>What do you think?</h2>
 
-                <button class="button" id="feedback-button">Feedback</button>
-                <!-- <button class="button hidden" id="submit-button" type="submit">Submit</button> -->
-                <button class="button hidden" id="close-feedback-button" type="button">X</button>
-            </div>
-       </div>
+                        <div>
+                            <label for="name">Name</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
 
+                        <div>
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
 
-       <!-- Popup Elements-->
-       <div>
-            <!-- Feedback Form -->
-            <div id="popup-feedback">
-                <form id="feedback-form" action="https://formdump.codeinstitute.net" method="POST">
+                        <div>
+                            <label for="comment">Comment</label>
+                            <textarea id="comment" name="comment" rows="5" required></textarea>
+                        </div>
 
-                    <h2>What do you think?</h2>
-
-                    <div>
-                        <label for="name">Name</label>
-                        <input type="text" id="name" name="name" required>
-                    </div>
-
-                    <div>
-                        <label for="email">Email</label>
-                        <input type="email" id="email" name="email" required>
-                    </div>
-
-                    <div>
-                        <label for="comment">Comment</label>
-                        <textarea id="comment" name="comment" rows="5" required></textarea>
-                    </div>
-
-                    <div>
-                        <button class="button" type="submit" id="submit-button">Submit</button>
-                    </div>
-                </form>
-            </div>
-
-            <!-- Instructions -->
-            <div id="popup-instructions">
-                <h2>How to Play</h2>
-                <ul>
-                    <li>Player 1 chooses a cell and marks it with an X.</li>
-                    <li>Player 2 chooses a cell and marks it with an O.</li>
-                    <li>The players take turns until a Win is achieved.</li>
-                    <li>A Win is achieved when one player gets three of their symbols in a row <br> (horizontally, vertically, or
-                        diagonally).</li>
-                    <li>If no Win is achieved, the game ends in a Draw.</li>
-                </ul>
-
-                <div id="images">
-                    <img class="img" src="assets/images/win-diagonal.png" alt="A tic tac toe board with O winning in the diagonal.">
-                    <img class="img" src="assets/images/win-horizontal.png" alt="A tic tac toe board with X winning in the horizontal.">
-                    <img class="img" src="assets/images/win-vertical.png" alt="A tic tac toe board with O winning in the vertical.">
+                        <div>
+                            <button class="button" type="submit" id="submit-button">Submit</button>
+                        </div>
+                    </form>
                 </div>
-            </div>
-       </div>
-    </section>
 
-    <!-- Audio Elements-->                                      <!-- Do I need these here and in JS ???-->
-    <audio src="assets/audio/button.mp3"></audio>
-    <audio src="assets/audio/click.mp3"></audio>
-    <audio src="assets/audio/victory.mp3"></audio>
+                <!-- Instructions -->
+                <div id="popup-instructions">
+                    <h2>How to Play</h2>
+                    <ul>
+                        <li>Player 1 chooses a cell and marks it with an X.</li>
+                        <li>Player 2 chooses a cell and marks it with an O.</li>
+                        <li>The players take turns until a Win is achieved.</li>
+                        <li>A Win is achieved when one player gets three of their symbols in a row <br> (horizontally, vertically, or
+                            diagonally).</li>
+                        <li>If no Win is achieved, the game ends in a Draw.</li>
+                    </ul>
+
+                    <div id="images">
+                        <img class="img" src="assets/images/win-diagonal.png" alt="A tic tac toe board with O winning in the diagonal.">
+                        <img class="img" src="assets/images/win-horizontal.png" alt="A tic tac toe board with X winning in the horizontal.">
+                        <img class="img" src="assets/images/win-vertical.png" alt="A tic tac toe board with O winning in the vertical.">
+                    </div>
+                </div>
+        </div>
+        </section>
+
+        <!-- Audio Elements-->                                      <!-- Do I need these here and in JS ???-->
+        <audio src="assets/audio/button.mp3"></audio>
+        <audio src="assets/audio/click.mp3"></audio>
+        <audio src="assets/audio/victory.mp3"></audio>
     
+    </main>
+
     <footer>
         <!-- Links to Social Media Channels -->
         <ul id="social-networks">
