@@ -138,8 +138,37 @@ Instructions | ![Wireframe Instructions Desktop Image](assets/wireframes/wf-inst
 
 ## Technologies Used
 ### Languages
+- [HTML5](https://en.wikipedia.org/wiki/HTML5)
+- [CSS3](https://en.wikipedia.org/wiki/CSS)
+- [Javascript](https://en.wikipedia.org/wiki/JavaScript)
 
 ### Frameworks, Libraries, and Programs 
+- [Google Fonts](https://fonts.google.com/)
+    - Google Fonts was used to find suitable font pairings, as well as link to the fonts in the .html files.
+
+- [Font Awesome](https://fontawesome.com/) was used to add icons in order to create a better visual experience for UX purposes.
+
+- [Favicon](favicon.io) was used to create and import a favicon for the website.
+
+- [Coolors](https://coolors.co/) was used to generate a color palette for the website.
+
+- [JPG to PNG](https://jpg2png.com/) was used to convert all images to PNG format.
+
+- [GitPod](https://gitpod.io/) was used for writing code, committing, and then pushing to GitHub.
+
+- [GitHub](https://github.com/) was used to store the project after pushing.
+
+- [Balsamiq](https://balsamiq.com/) was used to create the wireframes during the design phase of the project.
+
+- [Am I Responsive?](http://ami.responsivedesign.is/#) was used to ensure responsive design throughout the process and to generate the mockup images at the top of this file.
+
+- [Chrome DevTools](https://developer.chrome.com/docs/devtools/) was used during the development process for code review and to test responsiveness and accessibility.
+
+- [W3C Markup Validator](https://validator.w3.org/) was used to validate the HTML code.
+
+- [W3C CSS Validator](https://jigsaw.w3.org/css-validator/) was used to validate the CSS code.
+
+- [JSHint](https://jshint.com/) was used to validate the site's JavaScript code.
 
 [Back to top ⇧](#tic-tac-toe)
 

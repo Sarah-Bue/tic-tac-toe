@@ -1,5 +1,7 @@
+/* Google Fonts Import */
 @import url('https://fonts.googleapis.com/css2?family=Gloria+Hallelujah&display=swap');
 
+/* Override Browser Defaults */
 * {
     margin: 0;
     padding: 0;

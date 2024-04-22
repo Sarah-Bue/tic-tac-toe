@@ -219,9 +219,7 @@ function changeTurn() {
     }
 
     setHoverText();
-
 }
-
 
 /**
  * This function checks if a win has been achieved.
@@ -257,14 +255,6 @@ function checkWinner() {
     else {
     checkDraw(roundWon);
     }
-
-
-/*     if (roundWon) {
-        announceWinner();
-    }
-
-    // If no Winner, check for a Draw
-    checkDraw(); */
 }
 
 /**
@@ -280,15 +270,11 @@ function checkDraw() {
             break;
         }
     }
-
+    
     if (isFull && !gameOver) {
         gameOver = true;
         announceDraw();
     } 
-
-    if (x) {
-        return;
-        }
 }
 
 /**
@@ -333,6 +319,6 @@ function announceDraw() {
  * This function locks the board when a winner or a Draw has been achieved.
  * No marks can be placed when the board is locked.
  */
-function lockBoard() {
+/* function lockBoard() {
     
-}
+} */
