@@ -231,52 +231,86 @@ Instructions | ![Wireframe Instructions Desktop Image](assets/wireframes/wf-inst
 
 ### Manual Testing
 **Browser Compatibility**
-Browser | Issues 
---- | --- 
-Google Chrome | No issues with appearance, responsiveness, or functionality.
-Safari | No issues with appearance, responsiveness, or functionality.
-Mozilla Firefox | No issues with appearance, responsiveness, or functionality.
-Microsoft Edge | No issues with appearance, responsiveness, or functionality.
-JoyUI Native Browser | No issues with appearance, responsiveness, or functionality.
+Browser | Outcome | Pass/Fail
+--- | --- | ---
+Google Chrome | No issues with appearance, responsiveness, or functionality. | Pass
+Safari | No issues with appearance, responsiveness, or functionality. | Pass
+Mozilla Firefox | No issues with appearance, responsiveness, or functionality. | Pass
+Microsoft Edge | No issues with appearance, responsiveness, or functionality. | Pass
+JoyUI Native Browser | No issues with appearance, responsiveness, or functionality. | Pass
 
 **Device Compatibility**
-Device | Issues 
---- | --- 
-MacBook Pro 13" | No issues with appearance, responsiveness, or functionality.
-iPhone 13 Mini | No issues with appearance, responsiveness, or functionality.
-iPad 9th Generation | No issues with appearance, responsiveness, or functionality.
-Acer Predator Helios 300 | No issues with appearance, responsiveness, or functionality.
-Black Shark PAR-HOA | No issues with appearance, responsiveness, or functionality.
-Samsung Galaxy S23 | No issues with appearance, responsiveness, or functionality.
+Device | Outcome | Pass/Fail
+--- | --- | ---
+MacBook Pro 13" | No issues with appearance, responsiveness, or functionality. | Pass
+iPhone 13 Mini | No issues with appearance, responsiveness, or functionality. | Pass
+iPad 9th Generation | No issues with appearance, responsiveness, or functionality. | Pass
+Acer Predator Helios 300 | No issues with appearance, responsiveness, or functionality. | Pass
+Black Shark PAR-HOA | No issues with appearance, responsiveness, or functionality. | Pass
+Samsung Galaxy S23 | No issues with appearance, responsiveness, or functionality. | Pass
 
 **Common Elements Testing**
 
-- Cells
-    - Hovering over a cell will place a translucent X or O, depending on the turn.
-    - Clicking on a cell will place an X or O, depending on the turn.
-    - Clicking on a cell will play a short sound.
+Board
+Feature | Outcome | Pass/Fail
+--- | --- | ---
+Win Achieved | A message appears below the board to announce the outcome of the game, depending on the turn | Pass
+Win Achieved | A short victory sound is played | Pass
+Draw Achieved | A message appears below the board to announce the outcome of the game | Pass
+Draw Achieved | A short victory sound is played | Pass
+Win Achieved | A short victory sound is played | Pass
+Turn Tracker | On smaller devices, a turn indicator above the game board keeps track of player turns | Pass
 
-- Buttons
-    - Hovering over a button will invert its colors.
-    - Clicking on the "Instructions" or "Feedback" button will open a popup with additional information.
-    - Clicking on the little "X" in the corner of the popups will close them.
-    - Clicking on a button will play a differrent short sound.
-    - Clicking on the "Mute" button will mute the game's audio.
 
-- Board
-    - On smaller devices, a turn indicator above the game board keeps track of whose turn it is.
-    - When a Win or Draw is achieved, a message appears below the board to announce the outcome of the game.
-    - When a Win or Draw is achieved, a short victory sound will play.
+Cells
+Feature | Outcome | Pass/Fail
+--- | --- | ---
+Hovering over a cell | Translucent X or O appears, depending on the turn | Pass
+Clicking on a cell | X or O placed in cell, depending on the turn | Pass
+Clicking on a cell | A short sound is played | Pass
+Locked Board | No placements or hover effect after Win / Draw is achieved | Pass
 
-- Form
-    - All fields are required to fill out the form.
-    - Submitting the form takes the user to a [formdump page](https://formdump.codeinstitute.net/).
 
-- Footer
-    - Clicking on the social media icons in the footer opens the respective website in a new tab.
+Buttons
+Feature | Outcome | Pass/Fail
+--- | --- | ---
+Hovering over a button | Inverts colors | Pass
+Clicking on a butotn | A short sound is played | Pass
+Clicking on the Mute button | The sound is muted / unmuted depending on the current state | Pass
+Clicking on the Mute button | The button text changes between "Play Sound" and "Mute Sound" depending on the state | Pass
+Clicking on the "Instructions" button | A popup opens with additional information | Pass
+Clicking on the "Feedback" button | A popup opens with additional information | Pass
 
-- 404 Page
- - Clicking on the text above the image brings the user back to the main page.
+
+Popup Sections
+Feature | Outcome | Pass/Fail
+--- | --- | ---
+Clicking on the "Instructions" button | A popup opens with additional information | Pass
+Clicking on the "Instructions" button | The "Instructions" button disappears | Pass
+Clicking on the "Feedback" button | A popup opens with additional information | Pass
+Clicking on the "Feedback" button | The "Feedback" button disappears | Pass
+Clicking on the "X" button | The popup closes | Pass
+Clicking on the "X" button | The "Instructions" or "Feedback" button reappears | Pass
+
+
+Form
+Feature | Outcome | Pass/Fail
+--- | --- | ---
+Input Fields | All fields are required to submit the form | Pass
+Hovering over Submit button | Inverts colors | Pass
+Form Submission | Form information is taken to Code Institute's [formdump page](https://formdump.codeinstitute.net/) | Pass
+
+
+Footer
+Feature | Outcome | Pass/Fail
+--- | --- | ---
+Clicking on the Social Media Icons | The respective website is opened in a new tab | Pass
+
+404 Page
+Feature | Outcome | Pass/Fail
+--- | --- | ---
+404 Page | A broken or misspelled address will redirect the user to the 404 page | Pass
+Clicking on the link | The user is taken back to the main page | Pass
 
 [Back to top ⇧](#tic-tac-toe)
 

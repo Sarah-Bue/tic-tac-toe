@@ -120,14 +120,22 @@ function playVictory() {
 }
 
 /**
- * This function mutes all sounds.
+ * This function mutes and unmutes all sounds.
+ * It changes the text on the button to indicate whether clicking it will mute or unmute (play) the sound.
  */
-function muteSound() {
-                                                 // unmute when clicked again and sound is currently muted ? 
-    
-    clickSound.muted = true;
-    victorySound.muted = true;
-    buttonSound.muted = true;
+function muteSound() {    
+    if(clickSound.muted === true) {
+        clickSound.muted = false;
+        victorySound.muted = false;
+        buttonSound.muted = false;
+        muteButton.innerText = "Mute Sound";
+    }
+    else {
+        clickSound.muted = true;
+        victorySound.muted = true;
+        buttonSound.muted = true;
+        muteButton.innerText = "Play Sound";
+    }
 }
 
 /**
@@ -193,12 +201,7 @@ function clickCell(event) {
         if (clickedCell.innerText) {
             return;
         }
-                                                                    // Don't update cells if statusText is visible
-    /*    if (statusText.className = "visible") {
-            return;
-        }
-        */
-        // update cell  & index with current player's symbol
+
         clickedCell.innerText = currPlayer;
         const cellIndex = Array.from(cells).indexOf(clickedCell);
         board[cellIndex] = currPlayer;
@@ -215,7 +218,7 @@ function clickCell(event) {
  * This function changes to the next player's turn based on the current player.
  */
 function changeTurn() {
-    if (currPlayer === player_X) {                                  // currPlayer = (currPlayer == player_X) ? player_0 : player_X;
+    if (currPlayer === player_X) { 
         currPlayer = player_O;
     }
     else {
@@ -236,7 +239,6 @@ function changeTurn() {
 function checkWinner() {    
     let roundWon = false;
 
-                                            // for (let winningCell of winningCells) {         // for (let i = 0; i < winningCells.length; i++) 
     for (let i = 0; i < winningCells.length; i++) {
         const combo = winningCells[i];
         const cellA = board[combo[0]];

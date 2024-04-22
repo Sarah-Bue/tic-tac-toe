@@ -66,7 +66,6 @@
                 </div>
         </div>
 
-
         <!-- Popup Elements-->
         <div>
                 <!-- Feedback Form -->
@@ -108,20 +107,19 @@
                         <li>If no Win is achieved, the game ends in a Draw.</li>
                     </ul>
 
-                    <div id="images">
-                        <img class="img" src="assets/images/win-diagonal.png" alt="A tic tac toe board with O winning in the diagonal.">
-                        <img class="img" src="assets/images/win-horizontal.png" alt="A tic tac toe board with X winning in the horizontal.">
-                        <img class="img" src="assets/images/win-vertical.png" alt="A tic tac toe board with O winning in the vertical.">
+                    <div id="instruction-images">
+                        <img class="instruction-image" src="assets/images/win-diagonal.png" alt="A tic tac toe board with O winning in the diagonal.">
+                        <img class="instruction-image" src="assets/images/win-horizontal.png" alt="A tic tac toe board with X winning in the horizontal.">
+                        <img class="instruction-image" src="assets/images/win-vertical.png" alt="A tic tac toe board with O winning in the vertical.">
                     </div>
                 </div>
         </div>
         </section>
 
-        <!-- Audio Elements-->                                      <!-- Do I need these here and in JS ???-->
-        <audio src="assets/audio/button.mp3"></audio>
-        <audio src="assets/audio/click.mp3"></audio>
-        <audio src="assets/audio/victory.mp3"></audio>
-    
+        <!-- Audio Elements-->                                     
+        <audio src="assets/audio/button.mp3" class="hidden"></audio>
+        <audio src="assets/audio/click.mp3" class="hidden"></audio>
+        <audio src="assets/audio/victory.mp3" class="hidden"></audio>
     </main>
 
     <footer>
@@ -144,5 +142,4 @@
     <!-- Font Awesome Kit-->
     <script src="https://kit.fontawesome.com/a77617d661.js" crossorigin="anonymous"></script>
 </body>
-
 </html>

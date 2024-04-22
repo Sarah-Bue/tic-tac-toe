@@ -8,7 +8,7 @@
     box-sizing: border-box;
 }
 
-                                        /* General Styles */
+/* General Styles */
 
 body {
     width: 100vw;
@@ -34,29 +34,6 @@ header {
     justify-content: center;
 }
 
-footer {
-    width: 100%;
-    margin: 10px;
-    display: flex;
-    justify-content: space-evenly;
-    align-items: baseline;
-}
-
-h1 {
-    text-align: center;
-}
-
-h2 {
-    font-size: 150%;
-    text-transform: uppercase;
-    color: #FFB140;
-    font-weight: bolder;
-}
-
-#h2-404 {
-    color: #986C6A;
-}
-
 section {
     max-width: 95vw;
     width: 400px;
@@ -79,6 +56,27 @@ li {
     margin-right: 10px;
 }
 
+h1 {
+    text-align: center;
+}
+
+h2 {
+    font-size: 150%;
+    text-transform: uppercase;
+    color: #FFB140;
+    font-weight: bolder;
+}
+
+/* Footer */
+
+footer {
+    width: 100%;
+    margin: 10px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: baseline;
+}
+
 i {
     color: black;
 }
@@ -90,10 +88,16 @@ i {
     justify-content: space-between;
 }
 
+/* 404 Page */
+
 img {
     max-width: 50vw;
     max-height: 50vh;
     margin: 0;
+}
+
+#h2-404 {
+    color: #986C6A;
 }
 
 a {
@@ -106,7 +110,7 @@ a:hover {
     text-decoration: underline;
 }
 
-                                        /* Popup Styles */
+/* Popup Styles */
 form {
     background-color: #475B63;
     margin: 20px;
@@ -143,19 +147,19 @@ form h2,
     border: 2px solid black;
  }
 
- #images {
+ #instruction-images {
     display: flex;
     justify-content: space-around;
  }
 
- .img {
+ .instruction-image {
     width: 100px;
     height: 100px;
     margin-top: 10px;
     margin-bottom: 10px;
  }
 
-                                        /* Game Area */
+/* Game Area */
 
 #board {
     background-color: #986C6A;
@@ -176,6 +180,7 @@ form h2,
     border-right: 3px solid;
     border-bottom: 3px solid;
 }
+
 /* The code to remove the outher borders was adapted from an article
 by Patricia Nicole Opetina on dev.to */
 .cell:nth-child(3n) {
@@ -186,6 +191,7 @@ by Patricia Nicole Opetina on dev.to */
     border-bottom: none;
 }
 
+/* The code for the preview-hover function was adapted from Codebrainer */
 .x-hover:hover::after {
     content: "X";
     opacity: 0.2;
@@ -206,7 +212,18 @@ by Patricia Nicole Opetina on dev.to */
     display: block;
 }
 
-                                        /* Buttons */
+/* Buttons */
+
+button {
+    margin: 10px;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: #E2E6EA;
+    box-shadow: 3px 3px black;
+    font-family: "Gloria Hallelujah", sans-serif;
+    font-size: 1em;
+    cursor: pointer;
+}
 
 .buttons {
     width: auto;
@@ -219,17 +236,6 @@ by Patricia Nicole Opetina on dev.to */
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-}
-
-button {
-    margin: 10px;
-    padding: 10px;
-    border-radius: 10px;
-    background-color: #E2E6EA;
-    box-shadow: 3px 3px black;
-    font-family: "Gloria Hallelujah", sans-serif;
-    font-size: 1em;
-    cursor: pointer;
 }
 
 button:hover {
@@ -245,7 +251,8 @@ button:hover {
     z-index: 6;
     border-radius: 50%;
 }
-                                        /* Media Queries */
+
+/* Media Queries */
 /* Media Query: tablets and larger screens (768px and up) */
 @media screen and (min-width: 768px) {
     
