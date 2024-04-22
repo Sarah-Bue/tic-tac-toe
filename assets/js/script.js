@@ -5,6 +5,7 @@ document.addEventListener("DOMContentLoaded", function () {
                                     // HTML Elements
 const cells = document.querySelectorAll(".cell");
 const buttons = document.querySelectorAll(".button");
+const turnTracker = document.getElementById("turn-tracker");
 const statusText = document.getElementById("status-text");
 const muteButton = document.getElementById("mute-button");
 const resetButton = document.getElementById("reset-button");
@@ -137,6 +138,11 @@ function muteSound() {
 function startGame() {
     // Set Player to X
     currPlayer = player_X;
+
+    // Update turnTracker
+    turnTracker.textContent = `${currPlayer}'s turn`;
+  
+
     // Clear board
     cells.forEach((cell) => (cell.innerText = ""));
     board = ["", "", "", "", "", "", "", "", "",];
@@ -214,6 +220,8 @@ function changeTurn() {
     }
 
     setHoverText();
+
+    turnTracker.textContent = `${currPlayer}'s turn`;
 }
 
 /**
@@ -281,6 +289,9 @@ function announceWinner() {
     // play Winner sound
     playVictory();
 
+    // hide turnTracker
+    turnTracker.className = "hidden";
+
     // unhide status text
     statusText.className = "visible";
 
@@ -302,6 +313,9 @@ function announceWinner() {
 function announceDraw() {
     //play Winner sound
     playVictory();
+
+    // hide turnTracker
+    turnTracker.className = "hidden";
 
     // unhide status text
     statusText.className = "visible";
