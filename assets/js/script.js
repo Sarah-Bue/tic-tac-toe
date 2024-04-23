@@ -3,7 +3,8 @@ document.addEventListener("DOMContentLoaded", function () {
     startGame();
     
 });
-                                    // HTML Elements
+
+// HTML Elements
 const cells = document.querySelectorAll(".cell");
 const buttons = document.querySelectorAll(".button");
 const turnTracker = document.getElementById("turn-tracker");
@@ -15,7 +16,7 @@ const closeFeedbackButton = document.getElementById("close-feedback-button");
 const instructionsButton = document.getElementById("instructions-button");
 const closeInstructionsButton = document.getElementById("close-instructions-button");
 
-                                    // Game Elements
+// Game Elements
 const player_X = "X";
 const player_O = "O";
 let currPlayer = player_X;
@@ -32,7 +33,7 @@ const winningCells = [
     [2, 4, 6]
 ];
 
-                                    // Sounds
+// Sounds
 const clickSound = new Audio ("assets/audio/click.mp3");
 const victorySound = new Audio ("assets/audio/victory.mp3");
 const buttonSound = new Audio ("assets/audio/button.mp3");
@@ -40,7 +41,7 @@ clickSound.muted = false;
 victorySound.muted = false;
 buttonSound.muted = false;
 
-                                    // Event Listeners
+// Event Listeners
 cells.forEach((cell) => cell.addEventListener("click", (event) => {
     playClick();
     clickCell(event);
@@ -53,7 +54,7 @@ closeFeedbackButton.addEventListener("click", closeFeedbackPopup);
 instructionsButton.addEventListener("click", openInstructionsPopup);
 closeInstructionsButton.addEventListener("click", closeInstructionsPopup);
 
-                                    // Functions
+// Functions
 /**
  * This function opens the "Feedback" popup.
  */
