@@ -1,7 +1,8 @@
 # Tic Tac Toe
 ![Tic Tac Toe Image](assets/readme-files/mockups.png)
 
-This website is a simple online version of the classic turn-taking game Tic Tac Toe. Everything the user needs, from starting the game to reading the instructions and providing feedback, is easily accessible from the main page.
+This website is a retro-styled version of the classic turn-taking game Tic Tac Toe. Everything the user needs, from starting the game to reading the instructions and providing feedback, is easily accessible from the main page.
+The color palette and design, along with the 8bit sound effects, have been chosen to invoke 90s nostalgia in anyone who wants a quick game of Tic Tac Toe.
 
 Visit the deployed website [here](https://sarah-bue.github.io/tic-tac-toe/).
 
