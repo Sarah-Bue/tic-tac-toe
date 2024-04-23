@@ -323,12 +323,13 @@ a:hover {
   }
 
   /* Media Queries */
+  /* Media query: small phones (480px and down) */
   @media screen and (max-width: 480px) {
     #game-wrapper {
         padding: 30px;
     }
 }
-
+  /* Media query: large or landscape phones (576px and up) */
   @media screen and (min-width: 576px) {
     .buttons {
         flex-direction: row;
@@ -343,12 +344,13 @@ a:hover {
     }
   }
 
+/* Media query: tablets and larger (768px and up) */
   @media screen and (min-width: 768px) {
     button {
         font-size: 125%;
     }
   }
-
+/* Media query: laptops and larger (992px and up) */
   @media screen and (min-width: 992px) {
     button {
         font-size: 150%;
@@ -362,7 +364,7 @@ a:hover {
         padding: 60px 80px;
     }
 }
-
+/* Media query: large screens (1200px and up) */
   @media screen and (min-width: 1200px) {
     button {
         font-size: 175%;

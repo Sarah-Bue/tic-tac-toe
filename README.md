@@ -13,6 +13,11 @@ Visit the deployed website [here](https://sarah-bue.github.io/tic-tac-toe/).
     4. [Typography](#typography)
     5. [Wireframes](#wireframes)
 2. [Features](#features)
+    1. [General](#general)
+    2. [Dynamic Background](#dynamic-background)
+    3. [Board Area](#board-area)
+    4. [Popups](#popups)
+    5. [404 Page](#404-page)
 3. [Technologies Used](#technologies-used)
     1. [Languages](#languagesd)
     2. [Frameworks, Libraries, and Programs](#frameworks-libraries-and-programs)
@@ -89,6 +94,11 @@ Instructions | ![Wireframe Instructions Desktop Image](assets/wireframes/wf-inst
 ![Footer Image](assets/readme-files/footer.png)
 - The footer contains links to the website's social media channels.
 
+### Dynamic Background
+
+![Dynamic Background Gif](assets/readme-files/dynamic-background.gif)
+- The main page contains a dynamic background that plays continuously.
+
 ### Board Area
 **Board**
 
@@ -133,7 +143,7 @@ Instructions | ![Wireframe Instructions Desktop Image](assets/wireframes/wf-inst
 ### 404 Page
 
 ![404 Page](assets/readme-files/404-desktop.png)
-- This page is displayed in case of broken or misspelled links, and contains a link back to the main page.
+- This page is displayed in case of broken or misspelled links and contains a link back to the main page.
 
 [Back to top ⇧](#tic-tac-toe)
 
@@ -146,13 +156,15 @@ Instructions | ![Wireframe Instructions Desktop Image](assets/wireframes/wf-inst
 ### Frameworks, Libraries, and Programs 
 - [Google Fonts](https://fonts.google.com/) was used to find suitable font pairings, as well import the chosen fonts.
 
-- [Font Awesome](https://fontawesome.com/) was used to add icons in order to create a better visual experience for UX purposes.
+- [Font Awesome](https://fontawesome.com/) was used to add icons to create a better visual experience for UX purposes.
 
 - [Favicon](favicon.io) was used to create and import a favicon for the website.
 
 - [Coolors](https://coolors.co/) was used to generate a color palette for the website.
 
 - [JPG to PNG](https://jpg2png.com/) was used to convert all images to PNG format.
+
+- [Veed.io](https://www.veed.io/) was used to convert a screen recording into a gif.
 
 - [GitPod](https://gitpod.io/) was used for writing code, committing, and then pushing to GitHub.
 
@@ -174,29 +186,29 @@ Instructions | ![Wireframe Instructions Desktop Image](assets/wireframes/wf-inst
 
 ## Testing
 ### Testing User Stories
-- As a user, I want the website to be easy to navigate.
+As a user, I want the website to be easy to navigate.
  - Everything is presented on one page to minimize the need to switch between pages.
  - Buttons are clearly labelled and easy to find.
 
-- As a user, I want the game to be fun and engaging.
+As a user, I want the game to be fun and engaging.
  - The website is kept in simple, soothing colors to provide a pleasant experience.
  - The game is straightforward and can be played immediately.
  - The game plays sound effects similar to ones used in retro-style games to be fun for the user.
  - The game provides feedback and a victory sound to keep the user motivated and engaged.
 
-- As a user, I want to receive feedback about my performance in the game.
+As a user, I want to receive feedback about my performance in the game.
  - The game provides feedback after a game is won.
  - At the end of the game, a victory sound plays.
 
-- As a user, I want to be able to provide feedback about the game and the website.
+As a user, I want to be able to provide feedback about the game and the website.
  - A feedback form is available via the "Feedback" button below the game board.
  - The user can provide their name and email address, as well as their feedback in the comment field.
 
-- As a user, I want to be able to easily review the rules.
+As a user, I want to be able to easily review the rules.
  - The instructions are readily available via the "Instructions" button below the game board.
- - The instructions are kept clear and concise, and contain images of sample Wins to demonstrate possible outcomes across the different axes.
+ - The instructions are kept clear and concise and contain images of sample Wins to demonstrate possible outcomes across the different axes.
 
-- As a user, I want to be able to play the game on different devices.
+As a user, I want to be able to play the game on different devices.
  - The website is fully responsive and displays well across devices of different sizes.
  - The game is fully interactive on touchscreen devices as well when using a mouse or trackpad.
  - On smaller screens, where a hover effect is not possible, a visual indicator is used above the board to keep track of which player's turn it is.
@@ -213,7 +225,6 @@ Instructions | ![Wireframe Instructions Desktop Image](assets/wireframes/wf-inst
 **JavaScript Validation**
 
  ![JavaScript Validation Image](assets/readme-files/js-validation.png)
-
 
 ### Accessibility
 
@@ -239,7 +250,6 @@ Mozilla Firefox | No issues with appearance, responsiveness, or functionality. |
 Microsoft Edge | No issues with appearance, responsiveness, or functionality. | Pass
 JoyUI Native Browser | No issues with appearance, responsiveness, or functionality. | Pass
 
-
 **Device Compatibility**
 Device | Outcome | Pass/Fail
 --- | --- | ---
@@ -250,7 +260,7 @@ Acer Predator Helios 300 | No issues with appearance, responsiveness, or functio
 Black Shark PAR-HOA | No issues with appearance, responsiveness, or functionality. | Pass
 Samsung Galaxy S23 | No issues with appearance, responsiveness, or functionality. | Pass
 
-*Comment: On Safari on iPad and iPhone, the text on the buttons appears as blue rather than black. The developer decided not to address this issue as this does not have a major impact on the overall appearance.
+*Comment: On Safari for iPad and iPhone, the text on the buttons appears as blue rather than black. The developer decided not to address this issue as this does not have a major impact on the overall appearance.
 
 **Common Elements Testing**
 
@@ -264,45 +274,40 @@ Draw Achieved | A short victory sound is played | Pass
 Win Achieved | A short victory sound is played | Pass
 Turn Tracker | On smaller devices, a turn indicator above the game board keeps track of player turns | Pass
 
-
 Cells
 Feature | Outcome | Pass/Fail
 --- | --- | ---
-Hovering over a cell | Translucent X or O appears, depending on the turn | Pass
-Clicking on a cell | X or O placed in cell, depending on the turn | Pass
-Clicking on a cell | A short sound is played | Pass
+Hovering over a Cell | Translucent X or O appears, depending on the turn | Pass
+Clicking on a Cell | X or O placed in a cell, depending on the turn | Pass
+Clicking on a ceCellll | A short sound is played | Pass
 Locked Board | No placements or hover effect after Win / Draw is achieved | Pass
-
 
 Buttons
 Feature | Outcome | Pass/Fail
 --- | --- | ---
-Hovering over a button | Inverts colors | Pass
-Clicking on a button | A short sound is played | Pass
-Clicking on the Mute button | The sound is muted / unmuted depending on the current state | Pass
-Clicking on the Mute button | The button text changes between "Play Sound" and "Mute Sound" depending on the state | Pass
-Clicking on the "Instructions" button | A popup opens with additional information | Pass
-Clicking on the "Feedback" button | A popup opens with additional information | Pass
-
+Hovering over a Button | Inverts colors | Pass
+Clicking on a Button | A short sound is played | Pass
+Clicking on the Mute Button | The sound is muted / unmuted depending on the current state | Pass
+Clicking on the Mute Button | The button text changes between "Play Sound" and "Mute Sound" depending on the state | Pass
+Clicking on the "Instructions" Button | A popup opens with additional information | Pass
+Clicking on the "Feedback" Button | A popup opens with additional information | Pass
 
 Popup Sections
 Feature | Outcome | Pass/Fail
 --- | --- | ---
-Clicking on the "Instructions" button | A popup opens with additional information | Pass
-Clicking on the "Instructions" button | The "Instructions" button disappears | Pass
-Clicking on the "Feedback" button | A popup opens with additional information | Pass
-Clicking on the "Feedback" button | The "Feedback" button disappears | Pass
-Clicking on the "X" button | The popup closes | Pass
-Clicking on the "X" button | The "Instructions" or "Feedback" button reappears | Pass
-
+Clicking on the "Instructions" Button | A popup opens with additional information | Pass
+Clicking on the "Instructions" Button | The "Instructions" button disappears | Pass
+Clicking on the "Feedback" Button | A popup opens with additional information | Pass
+Clicking on the "Feedback" Button | The "Feedback" button disappears | Pass
+Clicking on the "X" Button | The popup closes | Pass
+Clicking on the "X" Button | The "Instructions" or "Feedback" button reappears | Pass
 
 Form
 Feature | Outcome | Pass/Fail
 --- | --- | ---
 Input Fields | All fields are required to submit the form | Pass
-Hovering over the "Submit" button | Inverts colors | Pass
+Hovering over the "Submit" Button | Inverts colors | Pass
 Form Submission | Form information is taken to Code Institute's [formdump page](https://formdump.codeinstitute.net/) | Pass
-
 
 Footer
 Feature | Outcome | Pass/Fail
@@ -313,12 +318,16 @@ Clicking on the Social Media Icons | The respective website is opened in a new t
 Feature | Outcome | Pass/Fail
 --- | --- | ---
 404 Page | A broken or misspelled address will redirect the user to the 404 page | Pass
-Clicking on the link | The user is taken back to the main page | Pass
+Clicking on the Link | The user is taken back to the main page | Pass
+
+Dynamic Background
+Feature | Outcome | Pass/Fail
+--- | --- | ---
+Loading the Main Page | A dynamic background plays continuously | Pass
 
 [Back to top ⇧](#tic-tac-toe)
 
 ## Finished Product
-
 Page | Desktop Version | Mobile Version
 --- | --- | ---
 Home | ![Home Desktop Image](assets/readme-files/home-desktop.png) | ![Home Mobile Image](assets/readme-files/home-mobile.png)
@@ -334,13 +343,9 @@ This website was developed using [GitPod](https://www.gitpod.io/), which was the
 Here are the steps to deploy a website to GitHub Pages from its GitHub repository:
 
 1. Log in to GitHub and locate the [GitHub Repository](https://github.com/).
-
 2. At the top of the Repository, locate the Settings button on the menu.
-
 3. Scroll down the Settings page until you locate the Pages section.
-
 4. Under Source, click the dropdown called None and select Master Branch.
-
 5. The page will refresh automatically and generate a link to your website.
 
 [Back to top ⇧](#tic-tac-toe)
@@ -351,16 +356,14 @@ Here are the steps to deploy a website to GitHub Pages from its GitHub repositor
 All content was written by the developer.
 
 ### Media
-The image used for the Favicon and the 404 page are by PIRO4D, and downloaded from [Pixabay](https://pixabay.com/).
+The image used for the Favicon and the 404 page are by PIRO4D, and was downloaded from [Pixabay](https://pixabay.com/).
 
-The sounds used on the website are by floraphonic, and downloaded from [Pixabay](https://pixabay.com/).
+The sounds used on the website are by floraphonic, and were downloaded from [Pixabay](https://pixabay.com/).
 
 ### Code
 [Stack Overflow](https://stackoverflow.com/), [W3Schools](https://www.w3schools.com/), and the "OpenJavaScript" channel on [YouTube](https://www.youtube.com/@OpenJavaScript) were consulted on a regular basis for both inspiration and to gain a deeper understanding of certain parts of the code.
 
-The code for the pop-up form has been adapted from the W3Schools code found [here](https://www.w3schools.com/howto/howto_js_popup_form.asp).
-
-The code to remove the outer borders of the board has been adapted from Patricia Nicole Opetina's code found on [Dev.to](https://dev.to/pat_the99/how-to-remove-outside-borders-of-a-3x3-grid-using-css-e-g-tic-tac-toe-ui-4ao8).
+The code for the pop-up form has been adapted from [W3Schools](https://www.w3schools.com/howto/howto_js_popup_form.asp).
 
 The code for the preview-hover function has been adapted from [Codebrainer](https://www.codebrainer.com/blog/tic-tac-toe-javascript-game).
 
