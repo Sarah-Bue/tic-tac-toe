@@ -239,15 +239,18 @@ Mozilla Firefox | No issues with appearance, responsiveness, or functionality. |
 Microsoft Edge | No issues with appearance, responsiveness, or functionality. | Pass
 JoyUI Native Browser | No issues with appearance, responsiveness, or functionality. | Pass
 
+
 **Device Compatibility**
 Device | Outcome | Pass/Fail
 --- | --- | ---
 MacBook Pro 13" | No issues with appearance, responsiveness, or functionality. | Pass
-iPhone 13 Mini | No issues with appearance, responsiveness, or functionality. | Pass
-iPad 9th Generation | No issues with appearance, responsiveness, or functionality. | Pass
+iPhone 13 Mini | No issues with appearance, responsiveness, or functionality.* | Pass
+iPad 9th Generation | No issues with appearance, responsiveness, or functionality.* | Pass
 Acer Predator Helios 300 | No issues with appearance, responsiveness, or functionality. | Pass
 Black Shark PAR-HOA | No issues with appearance, responsiveness, or functionality. | Pass
 Samsung Galaxy S23 | No issues with appearance, responsiveness, or functionality. | Pass
+
+*Comment: On Safari on iPad and iPhone, the text on the buttons appears as blue rather than black. The developer decided not to address this issue as this does not have a major impact on the overall appearance.
 
 **Common Elements Testing**
 
@@ -348,7 +351,7 @@ Here are the steps to deploy a website to GitHub Pages from its GitHub repositor
 All content was written by the developer.
 
 ### Media
-The image used for the Favicon and the 404 page are by PIRO, and downloaded from [Pixabay](https://pixabay.com/).
+The image used for the Favicon and the 404 page are by PIRO4D, and downloaded from [Pixabay](https://pixabay.com/).
 
 The sounds used on the website are by floraphonic, and downloaded from [Pixabay](https://pixabay.com/).
 
@@ -359,7 +362,9 @@ The code for the pop-up form has been adapted from the W3Schools code found [her
 
 The code to remove the outer borders of the board has been adapted from Patricia Nicole Opetina's code found on [Dev.to](https://dev.to/pat_the99/how-to-remove-outside-borders-of-a-3x3-grid-using-css-e-g-tic-tac-toe-ui-4ao8).
 
-The code for the preview-hover function was adapted from [Codebrainer](https://www.codebrainer.com/blog/tic-tac-toe-javascript-game).
+The code for the preview-hover function has been adapted from [Codebrainer](https://www.codebrainer.com/blog/tic-tac-toe-javascript-game).
+
+The code for the animated backrgound has been adapted from Álvaro on [Codepen](https://codepen.io/alvarotrigo/pen/gOddjdL).
 
 [Back to top ⇧](#tic-tac-toe)
 
